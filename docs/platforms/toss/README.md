@@ -2,6 +2,8 @@
 
 *작성일: 2026-07-21 · 대상: 카카오톡 광고상품 PM · 리서치 렌즈: 비즈보드/소식칩/톡딜 확장을 위한 7대 신규 아젠다*
 
+> **이미지 사용 안내**: 각 광고 상품 섹션 상단에 실제 UI 스크린샷·다이어그램을 첨부했습니다. 이미지 인덱스는 [assets/MANIFEST.md](./assets/MANIFEST.md) 참고. 모든 이미지의 저작권은 원 저작자(비바리퍼블리카·토스, AMPM글로벌, 각 블로그 필자)에게 있으며, 본 자료는 사내 벤치마크 아이데이션 목적으로만 사용됩니다.
+
 ---
 
 ## 요약
@@ -22,6 +24,19 @@
 ## 광고 상품 프로파일
 
 ### 1) 디스플레이 광고 – 송금 후 화면(포스트-액션 배너)
+
+<p align="center">
+  <img src="./assets/01a-post-transfer-banner-hero.png" alt="토스 배너 광고 대표 지면(모먼트 배너 4종)" width="720">
+</p>
+
+*↑ 토스 디스플레이 광고 상품 페이지의 배너 상품 대표 이미지. 모먼트 배너 4종 지면. 출처: [tossads.toss.im/category/banner](https://tossads.toss.im/category/banner)*
+
+<p align="center">
+  <img src="./assets/01b-post-transfer-banner-ui.png" alt="송금 완료 후 화면 배너 예시" width="600">
+</p>
+
+*↑ 배너 광고 지면 예시(송금 완료 후 화면 배너 포함). 출처: [tossads.toss.im/category/banner](https://tossads.toss.im/category/banner)*
+
 - **지면 / 트리거**: "송금이 완료된 이후" 화면, "함께 토스 켜기" 화면 등 토스 앱 내 핵심 액션 완료 직후 노출. 지면 선택 불가, 각 영역에 균등 분배 [출처: tossads.toss.im/category/banner, inside.ampm.co.kr/item/113].
 - **크리에이티브 스펙(저공수 여부)**: 2025~2026 개편 이후 한 광고세트 안에서 가로형·정방형·세로형 이미지 + 세로/가로 영상까지 모두 등록 가능. 소재 재활용성 매우 높음 → **저공수 O** [출처: tossads.toss.im/insights/product-information, tossads.toss.im 개편 안내].
 - **클릭 후 인터랙션**: 광고주 외부 랜딩 또는 토스 내부 랜딩 페이지(캠페인 상세) 이동. 광고주 자체 웹뷰가 가능해 "인앱 미니 랜딩" 성격을 가짐 [출처: tossads.toss.im/category/banner].
@@ -33,6 +48,35 @@
 - **카톡 적용 시사점**: 카톡의 통화 종료 화면, 톡딜 결제·주문 완료 화면, 선물하기 결제 완료 화면에 "액션 후 배너"를 성과형(CPC 자동 입찰) 인벤토리로 신설. 지면 자체는 카톡 UX가 이미 존재하는 완료화면이므로 개발 부담이 낮음.
 
 ### 2) 디스플레이 광고 – 배너 광고 개편(광고세트-소재 분리)
+
+<p align="center">
+  <img src="./assets/02a-banner-revamp-2026-set-vs-creative.png" alt="2026 광고세트-소재 분리 구조" width="720">
+</p>
+
+*↑ 2026 광고상품 소개서 표지 – 광고세트/소재 분리 구조. 출처: [tossads.toss.im/insights/product-information](https://tossads.toss.im/insights/product-information)*
+
+<p align="center">
+  <img src="./assets/02b-banner-revamp-inapp-landing.png" alt="인앱 랜딩(하프뷰) 소재 예시" width="480">
+</p>
+
+*↑ 인앱 랜딩(하프뷰) 소재 예시 — 광고 탭 후 화면 하단에서 반투명 카드가 올라오는 형태. 출처: [tossads.toss.im/category/banner](https://tossads.toss.im/category/banner)*
+
+**구조 개요 (광고세트 → 소재 자동 매칭)**
+
+```mermaid
+flowchart LR
+    A[광고주 등록 자산]
+    A --> B1[문구 카피]
+    A --> B2[이미지 3규격<br/>가로·정방·세로]
+    A --> B3[영상 2규격<br/>가로·세로]
+    B1 & B2 & B3 --> C[하나의 광고세트]
+    C --> D{시스템 자동 매칭}
+    D --> E1[모먼트 배너]
+    D --> E2[혜택 탭 배너]
+    D --> E3[페이지 배너]
+    D --> E4[리스트·보드 배너]
+```
+
 - **지면 / 트리거**: 토스 앱 내 모먼트 배너, 혜택탭 배너, 페이지 배너, 리스트 배너, 보드 배너 등 (구조 개편으로 지면 8종 이상을 하나로 통합) [출처: tossads.toss.im/category/intro].
 - **크리에이티브 스펙(저공수)**: 문구·이미지 3규격(가로/정방/세로)·영상 2규격(가로/세로)을 하나의 광고세트에 등록. 시스템이 지면·유저 상황에 맞게 자동 선택. **템플릿·오토크리에이티브에 최적화된 구조** [출처: tossads.toss.im 개편 안내].
 - **클릭 후 인터랙션**: 광고주 랜딩 or 인앱 랜딩(하프뷰 형태 사례 다수 관찰).
@@ -44,6 +88,15 @@
 - **카톡 적용 시사점**: 비즈보드의 스케일·포지션 전환을 위해선 크리에이티브 유형(비율)을 소재 단위에 분리하고 지면 상황에 따라 시스템이 자동 매칭하는 구조 필요. 토스가 2026년에 실증한 "한 세트-여러 비율" 모델이 참고 가능.
 
 ### 3) 디스플레이 광고 – 함께 토스 켜기 풀페이지 배너
+
+<p align="center">
+  <img src="./assets/03a-together-toss-fullpage-banner.jpg" alt="함께 토스 켜기 풀페이지 배너" width="360">
+  &nbsp;
+  <img src="./assets/03b-together-toss-fullpage-example.jpg" alt="풀페이지 배너 광고주 크리에이티브 예시" width="360">
+</p>
+
+*↑ 「함께 토스 켜기」 미션 실행 시 노출되는 풀페이지 배너 광고. 좌: 지면 예시, 우: 광고주 크리에이티브 노출 예시. 출처: [perfoin 네이버 블로그](https://blog.naver.com/perfoin/223404500347)*
+
 - **지면 / 트리거**: 사용자가 "함께 토스 켜기"(블루투스로 주변 유저와 매칭해 포인트 적립) 기능을 실행하는 시점에 풀페이지로 광고가 노출됨 [출처: blog.naver.com/perfoin/223404500347, brunch.co.kr/@eyesofjs/30].
 - **크리에이티브 스펙**: 풀페이지 브랜딩 크리에이티브(1:1 또는 세로형 대형 이미지). **저공수 아님(전용 소재 필요)**.
 - **클릭 후 인터랙션**: 광고주 랜딩. 사용자는 이미 리워드 획득 흐름에 진입한 상태라 방어감이 낮음.
@@ -55,6 +108,19 @@
 - **카톡 적용 시사점**: 카톡 내 리텐션형 소셜 미니 서비스(예: 오픈채팅 접속 대기, 그룹 초대 대기)에 풀뷰 브랜딩 광고 삽입. 단, 카톡의 UX 방어선(풀스크린 광고 지양)을 고려하면 **부분 차용**만 가능.
 
 ### 4) 리워드 광고 – 두근두근 1등 찍기(카탈로그 투표형)
+
+<p align="center">
+  <img src="./assets/04a-catalog-vote-doogun-hero.png" alt="두근두근 1등 찍기 UI - 6~10개 SKU 투표 화면" width="720">
+</p>
+
+*↑ 두근두근 1등 찍기 상품 대표 UI — 6~10개 SKU 카탈로그 투표 화면. 출처: [tossads.toss.im/insights/catalog_vote](https://tossads.toss.im/insights/catalog_vote)*
+
+<p align="center">
+  <img src="./assets/04b-catalog-vote-doogun-mechanic.png" alt="두근두근 1등 찍기 게이미피케이션 메커니즘" width="720">
+</p>
+
+*↑ 두근두근 1등 찍기 게이미피케이션 메커니즘(1등 예측 시 추가 리워드). 출처: [tossads.toss.im/insights/catalog_vote](https://tossads.toss.im/insights/catalog_vote)*
+
 - **지면 / 트리거**: 토스 앱 혜택 탭 내 리워드 지면. 하루 최대 2번 사용자가 6~10개 제품 중 1개를 "커스텀 질문"에 투표. 클릭 시 즉시 리워드, 투표한 제품이 1등이 되면 추가 리워드 [출처: tossads.toss.im/insights/catalog_vote].
 - **크리에이티브 스펙(저공수)**: 6~10개 SKU × 이미지+상품 정보(카탈로그 자동 조립 가능). **저공수 O**(상품 피드가 있으면 오토크리에이티브 가능).
 - **클릭 후 인터랙션**: 광고주 랜딩(할인 쿠폰·상세 페이지). 서비스 진입 후 앱 오픈 전환율 상승 사례 확인.
@@ -66,6 +132,15 @@
 - **카톡 적용 시사점**: 톡딜 상세 종료 시점 또는 소식칩·더보기 탭에 카탈로그 투표 광고 신설. 리워드 대신 톡 이모티콘/기프티콘 조각·초코 등 카카오 자체 리워드 화폐로 대체 가능. 상품 피드만 있으면 저공수 대량 캠페인 가능.
 
 ### 5) 리워드 광고 – 머니알림(푸시형 인앱 알림)
+
+<p align="center">
+  <img src="./assets/05a-money-notification-push.png" alt="머니알림 잠금화면 푸시" width="320">
+  &nbsp;
+  <img src="./assets/05b-money-notification-inbox.png" alt="머니알림 인앱 리스트 UI" width="440">
+</p>
+
+*↑ 좌: 잠금화면에 노출되는 머니알림 푸시. 우: 인앱 알림 리스트(10원 리워드 적립). 출처: [onliveplus 네이버 블로그](https://blog.naver.com/onliveplus/223498489306)*
+
 - **지면 / 트리거**: 머니알림을 구독한 유저 대상 앱 푸시. 클릭 시 광고주 이벤트 페이지로 이동, 사용자는 10원 포인트 획득 [출처: blog.naver.com/onliveplus/223498489306, blog.naver.com/propark1020/222335175626, lever.me/resource/blog/1981].
 - **크리에이티브 스펙**: 짧은 텍스트 카피 + 아이콘. **매우 저공수**.
 - **클릭 후 인터랙션**: 광고주 랜딩(웹뷰). 리워드는 알림 오픈 시점 자동 지급.
@@ -77,6 +152,13 @@
 - **카톡 적용 시사점**: 카톡의 **채널 알림**을 광고 지면화 하는 것은 이미 카카오톡 채널 메시지 광고가 존재. 단, 토스식 "리워드 지급 옵션"이 없다는 점이 차별점. 카톡의 이모티콘·톡DP 등 인앱 화폐를 리워드로 결합 시 오픈율 상승 여지. 단, 카톡은 UX상 리워드 광고 과잉 우려가 있으므로 부분 차용(예: 브랜드 알림톡 프리미엄 옵션).
 
 ### 6) 리워드 광고 – 행운퀴즈(퀴즈 참여형)
+
+<p align="center">
+  <img src="./assets/06-lucky-quiz-and-reward.jpg" alt="AMPM 토스 리워드 광고 라인업 - 행운퀴즈/머니알림/버튼누르기" width="360">
+</p>
+
+*↑ AMPM 광고상품 페이지의 토스 리워드 광고 라인업 소개(행운퀴즈·머니알림·버튼누르기 컴포짓). 행운퀴즈 단독 스크린샷은 공개 소스에서 확보하지 못해 종합 이미지로 대체 표시. 출처: [item.ampm.co.kr/view/16/item](https://item.ampm.co.kr/view/16/item)*
+
 - **지면 / 트리거**: 혜택 탭 내 행운퀴즈. 사용자는 힌트를 보고 정답을 맞히면 리워드 획득. 힌트·정답 페이지에 광고주 콘텐츠 노출 [출처: tossads.toss.im/].
 - **크리에이티브 스펙(저공수)**: 힌트 카피 + 정답 카피 + 이미지 몇 장 → **저공수 O**.
 - **클릭 후 인터랙션**: 정답 이후 광고주 랜딩으로 트래픽 집중. 광고 클릭률·전환률 모두 리워드가 강력한 인센티브로 작용.
@@ -88,6 +170,15 @@
 - **카톡 적용 시사점**: 카톡 오픈채팅 정보 탭 또는 소식칩에 **정답 맞히기형 리워드 광고**. 다만 "과도한 게이미피케이션"이 out-of-scope로 명시되었으므로, **광고주 사이드 학습만 활용**하는 것을 권장(수량·빈도를 극도로 제한).
 
 ### 7) 리워드 광고 – 이번 주 미션 / 주말 버튼 누르기
+
+<p align="center">
+  <img src="./assets/07a-weekend-mission-hero.jpg" alt="주말 버튼 누르기 상품 대표" width="380">
+  &nbsp;
+  <img src="./assets/07b-weekend-mission-ui.png" alt="주말 버튼 누르기 지면 UI" width="380">
+</p>
+
+*↑ 좌: 주말 버튼 누르기 상품 대표 이미지. 우: 혜택 탭 노출 UI 스크린샷. 출처: [highfriends0210 네이버 블로그](https://blog.naver.com/highfriends0210/223453625706)*
+
 - **지면 / 트리거**: 특정 요일에만 활성화되는 리워드 미션 지면. 사용자는 미션을 완료하고 광고주 콘텐츠에 노출 [출처: tossads.toss.im/category/intro, blog.naver.com/highfriends0210/223453625706].
 - **크리에이티브 스펙**: 텍스트 + 단순 이미지. **저공수**.
 - **클릭 후 인터랙션**: 광고주 이벤트 페이지.
@@ -99,6 +190,13 @@
 - **카톡 적용 시사점**: 톡딜의 요일별 딜과 광고 인벤토리를 결합해, **주말 한정 광고 슬롯** 신설 가능.
 
 ### 8) 리워드 광고 – 버튼 누르기(단일 SKU) / 버튼 누르기 카탈로그(멀티 SKU)
+
+<p align="center">
+  <img src="./assets/08a-press-button-catalog.webp" alt="버튼 누르기 상품 애니메이션" width="480">
+</p>
+
+*↑ 토스애즈 홈페이지의 버튼 누르기 상품 애니메이션(단일 SKU → 카탈로그 SKU 확장). 카탈로그(멀티 SKU) UI는 04번(두근두근 1등 찍기)와 상당 부분 중첩. 출처: [tossads.toss.im/](https://tossads.toss.im/)*
+
 - **지면 / 트리거**: 혜택 탭 내 개별 광고 지면. 사용자가 "버튼 누르기" 액션(단일 클릭)만으로 리워드 획득. 2025년 카탈로그형 확장 → 3개 상품 동시 노출, 타임딜 형식 지원 [출처: tossads.toss.im/insights/product-information].
 - **크리에이티브 스펙(저공수)**: 상품 이미지 + 문구. **매우 저공수**.
 - **클릭 후 인터랙션**: 광고주 랜딩. 리드폼과 연계 시 아웃랜딩 리드 수집 가능.
@@ -110,6 +208,19 @@
 - **카톡 적용 시사점**: 톡딜 상세 종료 화면 또는 소식칩에 **"타임딜 카탈로그 배너"** 삽입. 톡딜 이미 존재하는 상품 피드를 활용 시 오토크리에이티브 가능.
 
 ### 9) 라이브 마켓(라이브 커머스 광고)
+
+<p align="center">
+  <img src="./assets/09a-live-market-broadcast.png" alt="라이브 마켓 방송 지면" width="720">
+</p>
+
+*↑ 라이브 마켓 방송 지면 대표 이미지(60분 타임딜). 출처: [tossads.toss.im/category/live-market](https://tossads.toss.im/category/live-market)*
+
+<p align="center">
+  <img src="./assets/09b-live-market-ui.png" alt="라이브 커머스 UI 세부" width="720">
+</p>
+
+*↑ 라이브 커머스 UI 세부(진행자·상품·구매 CTA 구성). 출처: [tossads.toss.im/category/live-market](https://tossads.toss.im/category/live-market)*
+
 - **지면 / 트리거**: 토스 앱 내 라이브 커머스 방송. 광고주는 60분 타임딜 형식으로 방송 진행. 리워드와 결합해 시청자 확보 [출처: tossads.toss.im/].
 - **크리에이티브 스펙**: 60분 라이브 영상 + 프로모션 상품 → **고공수**.
 - **클릭 후 인터랙션**: 라이브 시청 → 상품 상세 페이지.
@@ -121,6 +232,35 @@
 - **카톡 적용 시사점**: 카톡 쇼핑탭 또는 톡딜에 60분 타임딜 라이브 슬롯을 광고화. 다만 이는 out-of-scope("풀스크린 비디오")와 겹치므로, **카톡 앱 밖 링크 유도 형태**만 검토.
 
 ### 10) 앱인토스(Apps in Toss) – 미니앱 광고 인프라 / 크리에이터 수익 쉐어
+
+<p align="center">
+  <img src="./assets/10a-apps-in-toss-og.png" alt="앱인토스 공식 소개 OG 이미지" width="480">
+</p>
+
+*↑ 앱인토스 공식 소개 OG 이미지 – 미니앱 생태계 슬로건. 출처: [toss.im/apps-in-toss](https://toss.im/apps-in-toss)*
+
+<p align="center">
+  <img src="./assets/10b-apps-in-toss-example-bubbleprint.png" alt="앱인토스 파트너 미니앱 사례 - 버블프린트샵" width="720">
+</p>
+
+*↑ 앱인토스 파트너 미니앱 사례(버블프린트샵) — 무설치 인앱 실행 UX. 출처: [toss.im/apps-in-toss](https://toss.im/apps-in-toss)*
+
+**크리에이터 수익 쉐어 구조 (카톡 아젠다 5 매핑)**
+
+```mermaid
+flowchart TB
+    C[크리에이터·개발자<br/>미니앱·숏폼]
+    P[pCTR 예측 모델]
+    A[광고주 소재풀]
+    U[유저]
+    C -->|콘텐츠 등록| P
+    A -->|캠페인 등록| P
+    P -->|자동 매칭| U
+    U -->|클릭·전환| R[수익 발생]
+    R -->|수익 쉐어| C
+    R -->|성과 리포트| A
+```
+
 - **지면 / 트리거**: 토스 앱 안에 외부 서비스가 미니앱(앱-인-앱) 형태로 탑재. 개발자·기업이 자신의 앱을 무설치로 노출 [출처: toss.im/apps-in-toss, developers-apps-in-toss.toss.im/intro/overview.html].
 - **크리에이티브 스펙**: React 기반 Granite 프레임워크로 개발. 저공수(1인 개발자·바이브코더 평균 5일 출시) [출처: toss.im/apps-in-toss].
 - **클릭 후 인터랙션**: 인앱 미니앱 실행(설치 없음). 미니앱 내부에서 광고 노출로 수익 창출 가능 [출처: iks-room.tistory.com, hwada.tistory.com, min-inter.co.kr/wiki/].
@@ -132,6 +272,13 @@
 - **카톡 적용 시사점**: 카톡 이미 미니앱/카카오톡채널 유사 인프라가 있음. **크리에이터 수익 쉐어 모델**을 앱인토스의 스마트 발송 로직처럼 pCTR 기반 자동 최적화로 도입 가능. 지금탭 숏폼 크리에이터에게 광고 매칭 최적화 시스템 필요.
 
 ### 11) 프로젝트 토스 X(성과형 광고 상품, 2026 신규 티저)
+
+<p align="center">
+  <img src="./assets/11-project-toss-x-webinar.png" alt="Project Toss X 웨비나 티저" width="720">
+</p>
+
+*↑ Project Toss X 웨비나 티저(Pioneer Club 초기 파트너 대상 성과형 광고 소개). 출처: [tossads.toss.im/insights/product-information](https://tossads.toss.im/insights/product-information)*
+
 - **지면 / 트리거**: 2026년 공개된 성과형 광고 상품. 기존 배너의 한계를 해결한다는 티저 [출처: tossads.toss.im/insights/product-information].
 - **크리에이티브 스펙**: 광고세트-소재 분리형 자동 최적화 구조 계승. 상세 스펙 미공개.
 - **넛지 요소**: 초기 파트너 프로그램 "Pioneer Club" 진행.
@@ -146,6 +293,40 @@
 ---
 
 ## 카톡 아젠다별 벤치마크 매핑
+
+**한눈 요약 — 카톡 7대 아젠다와 토스 대응 상품**
+
+```mermaid
+flowchart LR
+    subgraph 카톡 아젠다
+      K1[1. 비즈보드 보장형<br/>영상 3초→장초]
+      K2[2. 커스텀 비즈보드<br/>동적 배너]
+      K3[3. 통화 종료 광고]
+      K4[4. 서비스 종료 광고<br/>선물하기·톡딜]
+      K5[5. 수익 쉐어<br/>지금탭 숏폼]
+      K6[6. 오픈채팅<br/>플로팅 배너]
+      K7[7. 더보기 탭<br/>새 포맷]
+    end
+    subgraph 토스 벤치마크
+      T1[디스플레이 개편<br/>세트-소재 분리]
+      T2[송금 후 배너]
+      T3[두근두근 1등 찍기]
+      T4[카탈로그 버튼 누르기]
+      T5[앱인토스<br/>스마트 발송]
+      T6[함께 토스 켜기<br/>풀페이지]
+      T7[혜택 탭 리워드 5종]
+    end
+    K1 --> T1
+    K2 --> T1
+    K3 --> T2
+    K4 --> T2
+    K4 --> T3
+    K4 --> T4
+    K5 --> T5
+    K6 --> T6
+    K7 --> T3
+    K7 --> T7
+```
 
 ### 아젠다 1 — 비즈보드 보장형 고도화(3초→장초 영상)
 - **토스 벤치마크**: 디스플레이 광고 개편(광고세트-소재 분리, 3~5초 이상 세로·가로 영상 통합), Project Toss X 성과형 확장.
