@@ -36,7 +36,7 @@
 
 4개 플랫폼 리서치가 끝난 뒤 종합 정리 문서가 이 위치에 놓입니다.
 
-- [synthesis/final-report.md](./synthesis/) *(예정)*
+- [synthesis/README.md](./synthesis/) — **종합 리포트 (2026-07-22 완료)**: 7대 아젠다 벤치마크 매핑 + 전환률 높은 디스플레이 광고 신규 아이디어 8개
 
 ---
 
