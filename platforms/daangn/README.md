@@ -26,6 +26,14 @@
 
 ### 1) 지역광고(홈피드 네이티브)
 
+<p align="center">
+  <img src="./assets/01-hyperlocal-4x-visits-samdasoo.jpg" alt="제주삼다수 지역 타겟 캠페인" width="480">
+  &nbsp;
+  <img src="./assets/01-hyperlocal-woongjinthinkbig.jpg" alt="웅진씽크빅 지역 맞춤 타겟 캠페인" width="480">
+</p>
+
+*↑ 좌: 제주삼다수 지역/관심사 타겟으로 웹사이트 방문 효율 4배 향상. 우: 웅진씽크빅 지역 맞춤 타겟으로 오프라인 방문 유입 상승. 출처: [business.daangn.com/success-story?type=marketer](https://business.daangn.com/success-story?type=marketer)*
+
 - **지면 / 트리거**: 당근 홈 피드에 자연스럽게 삽입되는 네이티브 광고. 사용자 위치(동네) 기반 하이퍼로컬 타겟팅. 소상공인 셀프서브부터 대형 브랜드까지 진입 [출처: business.daangn.com/success-story 케이스 분류].
 - **크리에이티브 스펙(저공수 여부)**: 이미지 1장 + 짧은 카피 + CTA. 소상공인이 직접 스마트폰으로 촬영·업로드 가능한 저공수 포맷. 대형 브랜드는 동영상 소재도 활용. **저공수 O**.
 - **클릭 후 인터랙션**: 광고주 랜딩 또는 비즈프로필 페이지로 이동. 비즈프로필 이동 시 후기·소식·쿠폰까지 이어지는 딥링크형 인터랙션. 채팅 CTA로 즉시 상담 진입 가능.
@@ -40,6 +48,22 @@
 - **카톡 적용 시사점**: 카톡 오픈채팅 로컬 채팅방 상단이나 소식칩에 "동네명 자동 삽입" 카피를 결합한 지역 네이티브 광고 신설. 카톡의 위치·프로필 시그널과 결합해 하이퍼로컬 인벤토리 확장 가능. 스몰비즈 셀프서브 시스템은 카톡채널 셀프서브와 유사 구조를 참고.
 
 ### 2) 비즈프로필 (소상공인 홍보 인프라)
+
+<p align="center">
+  <img src="./assets/02-bizprofile-hero.png" alt="당근 비즈프로필 소상공인 프로필 페이지 UI" width="720">
+</p>
+
+*↑ 당근 비즈프로필 홈 히어로 — 소상공인 프로필 페이지 UI 예시. 출처: [business.daangn.com](https://business.daangn.com/)*
+
+<p align="center">
+  <img src="./assets/02-bizprofile-shoe-repair.png" alt="구두 수선 사장님 매출 6배 사례" width="360">
+  &nbsp;
+  <img src="./assets/02-bizprofile-3month-owner.png" alt="3개월차 사장님 비즈프로필 활용" width="360">
+  &nbsp;
+  <img src="./assets/02-bizprofile-modutour.png" alt="모두투어 비즈프로필 상담 문의 50% 증가" width="360">
+</p>
+
+*↑ 좌: 구두 수선 사장님 후기로 매출 6배 증가. 중: 3개월차 사장님 비즈프로필 활용 노하우. 우: 모두투어 비즈프로필 활용 여행 상담 50% 증가. 출처: [business.daangn.com/success-story](https://business.daangn.com/success-story?type=smb)*
 
 - **지면 / 트리거**: 사업자가 무료로 만들 수 있는 "동네 가게 페이지". 지역광고·검색 결과·비즈니스 카테고리에서 진입 [출처: business.daangn.com 첫 화면 카피].
 - **크리에이티브 스펙**: 상호명·소개·소식글·쿠폰·메뉴·후기 등 구성. **매우 저공수**(사장님이 직접 채움).
@@ -66,6 +90,14 @@
 
 ### 3) 브랜드프로필 (대형 브랜드 홍보 인프라)
 
+<p align="center">
+  <img src="./assets/03-brandprofile-momstouch.png" alt="맘스터치 브랜드/비즈프로필 지점 광고" width="480">
+  &nbsp;
+  <img src="./assets/03-brandprofile-ohouse.png" alt="오늘의집 대형 브랜드 프로필 유입 사례" width="480">
+</p>
+
+*↑ 좌: 맘스터치 브랜드/비즈프로필 지점 광고. 우: 오늘의집 만족스러운 유입 볼륨 확보 브랜드 프로필 사례. 출처: [business.daangn.com/success-story?type=marketer](https://business.daangn.com/success-story?type=marketer)*
+
 - **지면 / 트리거**: 대형 광고주용 브랜드 페이지. 홈피드·검색·카테고리에서 진입 [출처: business.daangn.com 사례 목록].
 - **크리에이티브 스펙**: 브랜드 히어로 이미지 + 소식·이벤트 + 상품 카탈로그. **중간 공수**(브랜드 자산 필요).
 - **클릭 후 인터랙션**: 소식글 조회 → 상품 상세 → 랜딩 or 리드폼. 이벤트 참여 CTA.
@@ -79,6 +111,12 @@
 
 ### 4) 검색광고(SA)
 
+<p align="center">
+  <img src="./assets/04-search-ads-nol.png" alt="NOL 검색광고 KPI 489% 초과" width="720">
+</p>
+
+*↑ NOL 검색캠페인 — 키워드 설계와 랜딩 최적화로 KPI 489% 초과 달성. 출처: [business.daangn.com/success-story?type=marketer](https://business.daangn.com/success-story?type=marketer)*
+
 - **지면 / 트리거**: 당근 검색 결과 상단 스폰서드 슬롯. 키워드 입찰 방식 [출처: NOL 사례 - "검색캠페인에서 키워드 설계와 랜딩 최적화로 KPI 489% 초과달성"].
 - **크리에이티브 스펙**: 이미지+제목+설명+CTA. **저공수 O**.
 - **클릭 후 인터랙션**: 광고주 랜딩 or 비즈프로필. 랜딩 페이지 최적화가 성과의 핵심.
@@ -91,6 +129,32 @@
 - **카톡 적용 시사점**: 카톡 검색 결과 상단에 스폰서드 슬롯 신설. 톡비즈니스 채널 검색이나 오픈채팅 검색과 결합 가능. 카카오맵과의 연동으로 로컬 검색 광고로 확장 여지.
 
 ### 5) 카탈로그 리타겟팅 광고
+
+<p align="center">
+  <img src="./assets/05-catalog-retarget-29cm.png" alt="29CM 카탈로그 리타겟팅 ROAS 4,500%" width="360">
+  &nbsp;
+  <img src="./assets/05-catalog-retarget-11st.png" alt="11번가 카탈로그 리타겟팅 KPI +185%" width="360">
+  &nbsp;
+  <img src="./assets/05-catalog-retarget-musinsa.png" alt="무신사 카탈로그 Feed" width="360">
+</p>
+
+*↑ 좌: 29CM ROAS 4,500%+. 중: 11번가 MAU 확대·구매 KPI +185%. 우: 무신사 카탈로그 Feed. 상품 피드 오토크리에이티브 3대 사례. 출처: [business.daangn.com/success-story?type=marketer](https://business.daangn.com/success-story?type=marketer)*
+
+**카탈로그 오토크리에이티브 구조 (아젠다 2·4 매핑)**
+
+```mermaid
+flowchart LR
+    A[광고주 상품 피드<br/>상품ID·이미지·가격·재고]
+    P[픽셀·SDK<br/>조회·장바구니 이력]
+    S[매칭 시스템]
+    U[유저]
+    A --> S
+    P --> S
+    S -->|자동 카드 생성| C[카탈로그 광고 카드]
+    C -->|홈피드·리타겟팅| U
+    U -->|클릭·전환| R[성과 리포트]
+    R -->|ROAS 최적화| S
+```
 
 - **지면 / 트리거**: 홈피드 또는 카테고리 지면. 사용자의 조회/장바구니 이력 기반 리타겟팅. 상품 피드 자동 카탈로그화 [출처: 29CM/SSG/무신사/11번가 사례].
 - **크리에이티브 스펙**: **상품 피드만 등록하면 시스템이 자동 카드 생성**(오토크리에이티브). **저공수 최상**.
@@ -108,6 +172,30 @@
 
 ### 6) 리드폼 광고 (Lead Form In-Ad)
 
+<p align="center">
+  <img src="./assets/06-leadform-amorepacific.png" alt="아모레퍼시픽 리드폼 상담신청 5배" width="360">
+  &nbsp;
+  <img src="./assets/06-leadform-nexen-tire.png" alt="넥센타이어렌탈 리드폼 유효 리드 확보" width="360">
+  &nbsp;
+  <img src="./assets/06-leadform-hanwha-life.jpg" alt="한화생명 다이렉트 보험료 산출 전환 2배+" width="360">
+</p>
+
+*↑ 좌: 아모레퍼시픽 리드폼 상담신청 5배+. 중: 넥센타이어렌탈 유효 타겟 리드 확보. 우: 한화생명 다이렉트 보험료 산출 전환 2배+ 초과. 출처: [business.daangn.com/success-story?type=marketer](https://business.daangn.com/success-story?type=marketer)*
+
+**리드폼 인터랙션 플로우 (아젠다 3·4·7 매핑)**
+
+```mermaid
+flowchart LR
+    A[홈피드/검색<br/>광고 노출]
+    B[사용자 클릭]
+    C[하프뷰 폼 오픈]
+    D[개인정보<br/>자동 채움]
+    E[사용자 확인·제출]
+    F[광고주 시스템<br/>웹훅 수신]
+    A --> B --> C --> D --> E --> F
+    D -.->|카톡 계정정보<br/>이름·연락처·주소| D
+```
+
 - **지면 / 트리거**: 홈피드·검색·카테고리에서 노출. **광고 유닛 안에서 정보 입력 폼 오픈** — 이름·연락처·문의내용 등을 광고를 떠나지 않고 제출 [출처: 아모레퍼시픽/넥센타이어렌탈/신기한나라 사례].
 - **크리에이티브 스펙**: 이미지+CTA "상담신청"·"자료받기". 폼 필드는 카톡 계정 정보 자동 채움 가능. **저공수 O**.
 - **클릭 후 인터랙션**: **하프뷰 형태의 폼 오픈 → 자동 채움 → 제출**. 광고주 시스템에 웹훅으로 전달.
@@ -124,6 +212,14 @@
 - **카톡 적용 시사점**: 카톡 계정정보(이름·연락처·주소) 자동 채움을 결합한 리드폼을 비즈보드·소식칩에 도입. 톡딜/선물하기 결제 완료 후 화면, 보이스톡/페이스톡 종료 화면에 하프뷰 리드폼 삽입. 광고주 대시보드는 카카오모먼트에 웹훅·이벤트마커 추가.
 
 ### 7) 동영상 광고
+
+<p align="center">
+  <img src="./assets/07-video-lg-electronics.jpg" alt="LG전자 동영상 구독 전환 3배 개선" width="480">
+  &nbsp;
+  <img src="./assets/07-video-arke.jpg" alt="아케이 동영상 ROAS 500%" width="480">
+</p>
+
+*↑ 좌: LG전자 동영상 소재로 구독 전환 성과 3배 개선. 우: 아케이(ARKE) 구매 전환 최적화 동영상으로 ROAS 500% 달성. 출처: [business.daangn.com/success-story?type=marketer](https://business.daangn.com/success-story?type=marketer)*
 
 - **지면 / 트리거**: 홈피드 네이티브 또는 카탈로그·검색 결과에 결합. 사운드 옵션·자동재생 정책은 앱 내에서 컨트롤(관찰).
 - **크리에이티브 스펙**: 세로/가로 영상. 브랜드는 전용 소재 필요(고공수), 소상공인은 스마트폰 촬영도 가능(저공수).
