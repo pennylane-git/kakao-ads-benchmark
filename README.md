@@ -27,7 +27,7 @@
 |---|---|---|
 | 토스 (Toss) | 완료 (2026-07-21) | [platforms/toss/](./platforms/toss/) |
 | 당근 (Daangn) | 완료 v1 (2026-07-22) | [platforms/daangn/](./platforms/daangn/) |
-| 배달의민족 (Baemin) | 예정 | [platforms/baemin/](./platforms/baemin/) |
+| 배달의민족 (Baemin) | 완료 (2026-07-22) | [platforms/baemin/](./platforms/baemin/) |
 | 오늘의집 (Ohou) | 예정 | [platforms/ohou/](./platforms/ohou/) |
 
 ---
