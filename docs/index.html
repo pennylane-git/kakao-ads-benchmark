@@ -637,6 +637,209 @@ p + p { margin-top: 12px; }
 }
 .platform-card a.detail:hover { color: var(--highlight); border-color: var(--highlight); }
 
+/* DA Surfaces */
+.surface-tabs {
+  display: flex;
+  gap: 0;
+  margin: 32px 0 0;
+  border-bottom: 2px solid var(--ink);
+}
+.surface-tab {
+  flex: 1;
+  padding: 18px 20px 16px;
+  background: transparent;
+  border: none;
+  border-top: 1px solid var(--rule);
+  border-left: 1px solid var(--rule);
+  border-right: 1px solid var(--rule);
+  cursor: pointer;
+  text-align: left;
+  color: var(--ink-2);
+  transition: background 0.15s, color 0.15s;
+  font-family: inherit;
+  border-radius: 0;
+}
+.surface-tab:last-child { border-right: 1px solid var(--rule); }
+.surface-tab:hover { background: var(--paper-2); }
+.surface-tab.active {
+  background: var(--ink);
+  color: var(--paper);
+  border-color: var(--ink);
+}
+.surface-tab .tab-num {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  opacity: 0.7;
+  display: block;
+  margin-bottom: 4px;
+}
+.surface-tab .tab-name {
+  font-family: 'Fraunces', serif;
+  font-size: 17px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+}
+.surface-panel { display: none; padding: 32px 0 12px; }
+.surface-panel.active { display: block; }
+
+.surface-context {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding: 20px 24px;
+  background: var(--paper-2);
+  margin-bottom: 32px;
+}
+.ctx-item .ctx-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9.5px;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--ink-mute);
+  margin-bottom: 4px;
+}
+.ctx-item .ctx-value {
+  font-family: 'Fraunces', serif;
+  font-weight: 500;
+  font-size: 14.5px;
+  letter-spacing: -0.01em;
+  line-height: 1.35;
+}
+.ctx-item .ctx-value.warn {
+  color: var(--highlight);
+  font-weight: 600;
+}
+
+.enhancement {
+  padding: 24px 0;
+  border-bottom: 1px solid var(--rule);
+  display: grid;
+  grid-template-columns: 44px 1fr;
+  gap: 20px;
+  align-items: start;
+}
+.enhancement:last-child { border-bottom: none; }
+.enh-rank {
+  font-family: 'Fraunces', serif;
+  font-weight: 600;
+  font-size: 26px;
+  line-height: 1;
+  color: var(--ink-mute);
+  letter-spacing: -0.02em;
+}
+.enhancement.top .enh-rank { color: var(--highlight); }
+.enh-title {
+  font-family: 'Fraunces', serif;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: -0.015em;
+  margin-bottom: 6px;
+}
+.enh-title .enh-badge {
+  display: inline-block;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9.5px;
+  font-weight: 500;
+  padding: 2px 7px;
+  border: 1px solid var(--ink-mute);
+  color: var(--ink-mute);
+  vertical-align: 3px;
+  margin-left: 8px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.enh-title .enh-badge.dev-low { color: #2C7A3F; border-color: #2C7A3F; }
+.enh-title .enh-badge.dev-mid { color: #B8492B; border-color: #B8492B; }
+.enh-title .enh-badge.dev-high { color: #7A2A1A; border-color: #7A2A1A; }
+.enh-title .enh-badge.dev-max { background: #7A2A1A; color: var(--paper); border-color: #7A2A1A; }
+.enh-desc { font-size: 13.5px; line-height: 1.55; color: var(--ink-2); margin-bottom: 8px; }
+.enh-refs {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  color: var(--ink-mute);
+  line-height: 1.7;
+  padding-left: 12px;
+  border-left: 2px solid var(--rule-soft);
+}
+.enh-refs strong { color: var(--highlight); font-weight: 700; }
+.enh-fit {
+  font-size: 12.5px;
+  color: var(--ink-2);
+  margin-top: 6px;
+  font-style: italic;
+}
+.enh-fit::before {
+  content: "▸ 왜 이 지면에 어울리나 ";
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  color: var(--ink-mute);
+  letter-spacing: 0.08em;
+  font-style: normal;
+  text-transform: uppercase;
+  margin-right: 4px;
+}
+.warn-note {
+  padding: 14px 18px;
+  background: #FDF5EB;
+  border-left: 3px solid var(--highlight);
+  font-size: 13px;
+  line-height: 1.55;
+  margin-bottom: 20px;
+  color: var(--ink-2);
+}
+.warn-note strong { color: var(--highlight); }
+
+.surface-matrix {
+  margin: 40px 0 12px;
+  border-top: 2px solid var(--ink);
+  border-left: 2px solid var(--ink);
+}
+.sm-row {
+  display: grid;
+  grid-template-columns: 2fr repeat(3, 1fr);
+  border-bottom: 1px solid var(--rule);
+}
+.sm-row.header {
+  background: var(--paper-2);
+  border-bottom: 2px solid var(--ink);
+}
+.sm-cell {
+  padding: 10px 14px;
+  border-right: 1px solid var(--rule);
+  font-size: 12.5px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.sm-row.header .sm-cell {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10.5px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 600;
+  color: var(--ink);
+}
+.sm-cell.label {
+  justify-content: flex-start;
+  text-align: left;
+  font-weight: 500;
+  color: var(--ink);
+  font-family: 'Pretendard Variable', sans-serif;
+}
+.sm-mark {
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 700;
+  font-size: 14px;
+}
+.sm-mark.star { color: var(--highlight); }
+.sm-mark.opt { color: var(--ink-2); }
+.sm-mark.none { color: var(--rule); }
+
 /* Roadmap */
 .roadmap { margin-top: 36px; border-top: 1px solid var(--ink); }
 .road-phase {
@@ -771,6 +974,10 @@ footer .colophon {
   .road-phase { grid-template-columns: 1fr; gap: 16px; }
   .bench-list li { grid-template-columns: 1fr; gap: 4px; }
   .bench-metric { text-align: left; }
+  .surface-tabs { flex-direction: column; }
+  .surface-tab { border-right: 1px solid var(--rule); }
+  .surface-context { grid-template-columns: repeat(2, 1fr); }
+  .sm-row { grid-template-columns: 2fr repeat(3, 1fr); font-size: 11px; }
 }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
@@ -792,12 +999,13 @@ footer .colophon {
         <li><a href="#matrix"><span class="num mono">§1</span><span>7×4 매트릭스</span></a></li>
         <li><a href="#agendas"><span class="num mono">§2</span><span>7대 아젠다</span></a></li>
         <li><a href="#ideas"><span class="num mono">§3</span><span>신규 아이디어 8</span></a></li>
+        <li><a href="#da-improve"><span class="num mono">§4</span><span>DA 지면 개선안</span></a></li>
       </ul>
       <div class="group-label">Reference</div>
       <ul>
-        <li><a href="#platforms"><span class="num mono">§4</span><span>플랫폼별 리포트</span></a></li>
-        <li><a href="#roadmap"><span class="num mono">§5</span><span>개발 로드맵</span></a></li>
-        <li><a href="#questions"><span class="num mono">§6</span><span>열린 질문</span></a></li>
+        <li><a href="#platforms"><span class="num mono">§5</span><span>플랫폼별 리포트</span></a></li>
+        <li><a href="#roadmap"><span class="num mono">§6</span><span>개발 로드맵</span></a></li>
+        <li><a href="#questions"><span class="num mono">§7</span><span>열린 질문</span></a></li>
       </ul>
     </nav>
     <div class="side-foot">
@@ -1335,9 +1543,285 @@ footer .colophon {
       </div>
     </section>
 
-    <!-- §4 PLATFORMS -->
+    <!-- §4 DA IMPROVEMENTS -->
+    <section id="da-improve">
+      <div class="eyebrow">§4 DA Surface Enhancements</div>
+      <h2 class="display">기존 DA 지면 개선안</h2>
+      <p class="lead">카톡은 디스플레이 광고가 주력이지만 DA 비중은 낮은 상황. "신규 지면 개설"이 아니라 <strong>이미 있는 3개 DA 지면</strong>에 어떤 에셋·인터랙션을 얹으면 CVR을 끌어올릴 수 있을지, 4개 플랫폼에서 실증된 요소만 골라 지면별로 매칭했습니다.</p>
+
+      <div class="surface-tabs">
+        <button class="surface-tab active" data-surface="feed">
+          <span class="tab-num">Surface 1</span>
+          <span class="tab-name">친구탭 소식칩 피드형</span>
+        </button>
+        <button class="surface-tab" data-surface="shorts">
+          <span class="tab-num">Surface 2</span>
+          <span class="tab-name">숏폼 동영상 피드형</span>
+        </button>
+        <button class="surface-tab" data-surface="chat">
+          <span class="tab-num">Surface 3</span>
+          <span class="tab-name">채팅탭 리스트형</span>
+        </button>
+      </div>
+
+      <!-- Panel 1 · Feed -->
+      <div class="surface-panel active" data-panel="feed">
+        <div class="surface-context">
+          <div class="ctx-item"><div class="ctx-label">사용자 모드</div><div class="ctx-value">정보 탐색<br>수동 소비</div></div>
+          <div class="ctx-item"><div class="ctx-label">방어감</div><div class="ctx-value">중간</div></div>
+          <div class="ctx-item"><div class="ctx-label">스크롤 속도</div><div class="ctx-value">중간</div></div>
+          <div class="ctx-item"><div class="ctx-label">사용자 의도</div><div class="ctx-value">"새로 뭐 있나 훑기"</div></div>
+        </div>
+
+        <div class="enhancement top">
+          <div class="enh-rank">01</div>
+          <div>
+            <div class="enh-title">카탈로그 캐러셀 <span class="enh-badge dev-mid">Dev 중</span></div>
+            <p class="enh-desc">단일 이미지 → 3~6개 상품 카드가 옆으로 스와이프되는 캐러셀. 광고주는 상품 피드만 등록, 시스템이 사용자 조회 이력 기반으로 자동 큐레이션.</p>
+            <div class="enh-refs">
+              <strong>REF</strong> 당근 29CM ROAS 4,500%+ · SSG ROAS 5배+ · 11번가 KPI +185% · 무신사 카탈로그 Feed
+            </div>
+            <div class="enh-fit">소식 피드는 원래 "새로운 것 훑기" 모드. 상품 카탈로그도 같은 성격이라 UX 저항이 낮음.</div>
+          </div>
+        </div>
+
+        <div class="enhancement top">
+          <div class="enh-rank">02</div>
+          <div>
+            <div class="enh-title">리드폼 하프뷰 인터랙션 <span class="enh-badge dev-mid">Dev 중</span></div>
+            <p class="enh-desc">CTA 클릭 시 화면 하단에서 하프뷰 폼이 슬라이드업. 카톡 계정정보(이름·연락처·주소) 자동 채움 → 확인·제출만.</p>
+            <div class="enh-refs">
+              <strong>REF</strong> 당근 아모레퍼시픽 <strong>상담신청 5배+</strong> · 신기한나라 DB KPI 150% · 한화생명 전환 목표 2배+ 초과 · 넥센타이어렌탈 유효 리드
+            </div>
+            <div class="enh-fit">사용자가 앱을 떠나지 않고 액션 완결 → drop-off 없음. 특히 금융·보험·자동차·교육 카테고리에 강력.</div>
+          </div>
+        </div>
+
+        <div class="enhancement">
+          <div class="enh-rank">03</div>
+          <div>
+            <div class="enh-title">지역명 자동 삽입 카피 <span class="enh-badge dev-low">Dev 낮</span></div>
+            <p class="enh-desc">카드 카피에 "○○동 이웃분들께" 등 사용자 지역명 자동 삽입. 광고주는 템플릿만 등록.</p>
+            <div class="enh-refs">
+              <strong>REF</strong> 당근 웅진씽크빅 지역 맞춤 오프라인 방문 · 제주삼다수 <strong>웹방문 4배+</strong> · 현대자동차 <strong>KPI 140%</strong>
+            </div>
+            <div class="enh-fit">소셜 피드에서 개인화 신호는 관련성을 즉시 상승. 카톡 위치 데이터는 저활용 자산.</div>
+          </div>
+        </div>
+
+        <div class="enhancement">
+          <div class="enh-rank">04</div>
+          <div>
+            <div class="enh-title">소셜프루프 배지 (후기·별점·거리) <span class="enh-badge dev-low">Dev 낮</span></div>
+            <p class="enh-desc">카드 하단에 "이 브랜드 리뷰 300개 · 평균 4.7점 · 근처 이웃 25명이 관심" 등 소셜프루프 자동 표시.</p>
+            <div class="enh-refs">
+              <strong>REF</strong> 당근 소상공인 다수 사례 · 구두수선 매출 6배 · 시공업 하루 문의 3건+ · 카페 단골 3천명
+            </div>
+            <div class="enh-fit">광고 카드에 "실제 사용자" 신호가 붙으면 광고감이 크게 감소. 카톡채널 구독자 수·별점을 표준 배지로.</div>
+          </div>
+        </div>
+
+        <div class="enhancement">
+          <div class="enh-rank">05</div>
+          <div>
+            <div class="enh-title">프레임 확장 인터랙션 <span class="enh-badge dev-high">Dev 높</span></div>
+            <p class="enh-desc">카드 탭 시 프레임이 화면 3/4까지 확장되며 브랜드 미니 스토어·이벤트 페이지가 인앱으로 오픈.</p>
+            <div class="enh-refs">
+              <strong>REF</strong> 토스 인앱 랜딩(하프뷰) 스펙 · 배민 프로모션 스토어 · 오늘의집 브랜드관
+            </div>
+            <div class="enh-fit">사용자가 앱을 떠나지 않고 브랜드와 인터랙션 완결. 시즌 프로모션·이벤트 브랜드에 강력.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Panel 2 · Shorts -->
+      <div class="surface-panel" data-panel="shorts">
+        <div class="surface-context">
+          <div class="ctx-item"><div class="ctx-label">사용자 모드</div><div class="ctx-value">몰입 소비</div></div>
+          <div class="ctx-item"><div class="ctx-label">방어감</div><div class="ctx-value">낮음</div></div>
+          <div class="ctx-item"><div class="ctx-label">스크롤 속도</div><div class="ctx-value">빠름</div></div>
+          <div class="ctx-item"><div class="ctx-label">사용자 의도</div><div class="ctx-value">시간 소비<br>엔터테인먼트</div></div>
+        </div>
+
+        <div class="enhancement top">
+          <div class="enh-rank">01</div>
+          <div>
+            <div class="enh-title">크리에이터 콘텐츠 스폰서 <span class="enh-badge dev-high">Dev 높</span></div>
+            <p class="enh-desc">지금탭 크리에이터가 만든 실제 콘텐츠에 광고주 상품을 태그. 사용자가 태그 탭 시 상품 상세로 진입. 크리에이터에게 판매 커미션 배분.</p>
+            <div class="enh-refs">
+              <strong>REF</strong> 오늘의집 크리에이터 수익쉐어(집사) <strong>임팩트 25/25 만점</strong> · 콘텐츠 스폰서(집들이) 24/25 · 국내 유일 완결형 UGC-커머스
+            </div>
+            <div class="enh-fit">광고를 "크리에이터가 소개하는 상품" 형태로 변환 → 광고 저항감 최소. 크리에이터 신뢰 자산 활용.</div>
+          </div>
+        </div>
+
+        <div class="enhancement top">
+          <div class="enh-rank">02</div>
+          <div>
+            <div class="enh-title">하프뷰 상품 카드 (동영상 위 슬라이드업) <span class="enh-badge dev-mid">Dev 중</span></div>
+            <p class="enh-desc">영상 재생 중 특정 초에 하단에서 상품 카드가 슬라이드업. 카드 탭 시 상품 상세로 진입하되 영상은 사운드만 낮춰 재생 유지.</p>
+            <div class="enh-refs">
+              <strong>REF</strong> 오늘의집 오하 라이브 커머스 상품 카드 UX · 당근 카탈로그 리타겟팅 카드
+            </div>
+            <div class="enh-fit">영상 시청을 방해하지 않으면서 커머스 전환 트리거 제공. 특히 라이브 커머스·상품 데모 영상에 강력.</div>
+          </div>
+        </div>
+
+        <div class="enhancement">
+          <div class="enh-rank">03</div>
+          <div>
+            <div class="enh-title">넛지 카피 자동 삽입 (카운트다운·참여자수) <span class="enh-badge dev-low">Dev 낮</span></div>
+            <p class="enh-desc">영상 광고 하단 자막에 "지금 500명이 보고 있어요"·"오늘 자정까지 30% 할인" 자동 삽입. FOMO 활용.</p>
+            <div class="enh-refs">
+              <strong>REF</strong> 배민 프로모션 스토어 카운트다운 · 오늘의집 오하 라이브 알림 · 배민 B마트 "1시간 이내 배달"
+            </div>
+            <div class="enh-fit">몰입 상태에서 즉시 액션 유도 필요. FOMO 넛지가 스킵률을 낮춤.</div>
+          </div>
+        </div>
+
+        <div class="enhancement">
+          <div class="enh-rank">04</div>
+          <div>
+            <div class="enh-title">인터랙티브 이벤트 (탭·스와이프 참여) <span class="enh-badge dev-mid">Dev 중</span></div>
+            <p class="enh-desc">영상 광고에 "탭해서 응원해요"·"스와이프해서 상품 보기" 등 인터랙션 삽입. 참여 시 리워드(초코·이모티콘 조각) 지급.</p>
+            <div class="enh-refs">
+              <strong>REF</strong> 토스 두근두근 1등 찍기 <strong>클릭률 5%·클릭 190만+</strong> · 토스 리워드 광고 5종
+            </div>
+            <div class="enh-fit">참여율·기억률 상승. 단, "과도한 게이미피케이션 배제" 원칙 유의 → 빈도 제한 필수.</div>
+          </div>
+        </div>
+
+        <div class="enhancement">
+          <div class="enh-rank">05</div>
+          <div>
+            <div class="enh-title">사운드 온 CTA <span class="enh-badge dev-low">Dev 낮</span></div>
+            <p class="enh-desc">음소거 자동재생 상태에서 "탭해서 소리 켜기" 명시적 CTA. 소리 켜는 사용자는 강한 관심 신호 → 광고주 대시보드에 CVR 예측치로 노출.</p>
+            <div class="enh-refs">
+              <strong>REF</strong> 업계 표준(관찰) · 오늘의집·당근 동영상 광고 관행
+            </div>
+            <div class="enh-fit">사운드 온은 참여도 최상급 신호. 이 신호를 프리미엄 인벤토리 가치로 전환 가능.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Panel 3 · Chat -->
+      <div class="surface-panel" data-panel="chat">
+        <div class="surface-context">
+          <div class="ctx-item"><div class="ctx-label">사용자 모드</div><div class="ctx-value">목적 지향<br>기능 사용</div></div>
+          <div class="ctx-item"><div class="ctx-label">방어감</div><div class="ctx-value warn">매우 높음</div></div>
+          <div class="ctx-item"><div class="ctx-label">스크롤 속도</div><div class="ctx-value warn">매우 빠름</div></div>
+          <div class="ctx-item"><div class="ctx-label">사용자 의도</div><div class="ctx-value">특정 대화 찾기</div></div>
+        </div>
+
+        <div class="warn-note">
+          <strong>주의:</strong> 채팅탭은 광고 도입 리스크가 3개 지면 중 가장 높음. 아래 개선안들은 최대한 <strong>미니멀·컨텍스트 매칭·접힘 상태</strong>를 기본값으로 해야 함. 사용자가 명시적으로 확장할 때만 광고 콘텐츠 전개.
+        </div>
+
+        <div class="enhancement top">
+          <div class="enh-rank">01</div>
+          <div>
+            <div class="enh-title">접힘 상태 컨텍스트 카드 <span class="enh-badge dev-mid">Dev 중</span></div>
+            <p class="enh-desc">리스트에 광고가 "카드"가 아니라 한 줄 알림 형태로 삽입. 접힘 상태에서는 아이콘 + "○○동 근처 새 매장" 같은 짧은 카피만. 사용자 탭 시에만 카드 확장.</p>
+            <div class="enh-refs">
+              <strong>REF</strong> 당근 비즈프로필+지역광고 지역 컨텍스트 카드 · 배민 우리가게클릭 CPC 셀프서브
+            </div>
+            <div class="enh-fit">리스트 UI 시각 무게를 흐리지 않음. 명시적 확장이라 광고 클릭이 곧 강한 관심 신호.</div>
+          </div>
+        </div>
+
+        <div class="enhancement top">
+          <div class="enh-rank">02</div>
+          <div>
+            <div class="enh-title">대화 완료 후 컨텍스트 배너 <span class="enh-badge dev-low">Dev 낮</span></div>
+            <p class="enh-desc">채팅방을 나온 직후 리스트 최상단에 컨텍스트 배너 1회 노출. 방금 나눈 대화의 카테고리(오픈채팅방 유형)와 관련된 광고.</p>
+            <div class="enh-refs">
+              <strong>REF</strong> 토스 송금 후 배너 · 배민 결제 완료 후 배너 (지불의사 검증 세그먼트 CPA 최적)
+            </div>
+            <div class="enh-fit">대화 종료 순간은 방어감이 잠깐 내려간 순간. 대화 내용 자체는 절대 사용 X — 카테고리·시간대만.</div>
+          </div>
+        </div>
+
+        <div class="enhancement">
+          <div class="enh-rank">03</div>
+          <div>
+            <div class="enh-title">채팅방 유형별 브랜드 스폰서 스티커 <span class="enh-badge dev-mid">Dev 중</span></div>
+            <p class="enh-desc">오픈채팅방 유형에 어울리는 브랜드가 방 상단에 작은 스폰서 스티커로 상시 노출. 방장 승인 브랜드만.</p>
+            <div class="enh-refs">
+              <strong>REF</strong> 배민 프로모션 스토어 브랜드 미니 스토어 · 오늘의집 브랜드관 상시 운영 · 배민문방구 브랜드 IP 콜라보
+            </div>
+            <div class="enh-fit">"이 대화는 ○○브랜드가 응원해요" 형태의 미니멀 스폰서십. 강제 광고 아닌 방장-브랜드 파트너십.</div>
+          </div>
+        </div>
+
+        <div class="enhancement">
+          <div class="enh-rank">04</div>
+          <div>
+            <div class="enh-title">오픈채팅 방장 셀프서브 광고 <span class="enh-badge dev-max">Dev 최상</span></div>
+            <p class="enh-desc">오픈채팅 방장이 자기 방을 홍보하기 위해 다른 채팅 리스트 상단에 CPC로 노출. 소상공인 방장인 경우 매장 홍보로 확장.</p>
+            <div class="enh-refs">
+              <strong>REF</strong> 당근 비즈프로필+지역광고 소상공인 43+개 성공 사례 · 배민 우리가게클릭 30만+ 소상공인 셀프서브
+            </div>
+            <div class="enh-fit">광고주가 카톡 유저 자신(방장)이라 광고 저항감 크게 감소. 카톡 광고주 저변 롱테일 확장.</div>
+          </div>
+        </div>
+
+        <div class="enhancement">
+          <div class="enh-rank">05</div>
+          <div>
+            <div class="enh-title">지역명·시간대 개인화 카피 <span class="enh-badge dev-low">Dev 낮</span></div>
+            <p class="enh-desc">리스트 상단 배너 카피에 지역·시간대·요일 자동 삽입. "오늘 저녁 6시, ○○동 근처에서 열리는 이벤트".</p>
+            <div class="enh-refs">
+              <strong>REF</strong> 당근 지역명 자동 삽입 사례 다수
+            </div>
+            <div class="enh-fit">리스트 UI에서 광고가 어울리려면 컨텍스트 관련성이 최상급이어야 함. 위치+시간+요일 시그널이 만들어냄.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Cross-surface matrix -->
+      <h3 style="margin-top:56px;">지면 × 에셋 매트릭스 · 한눈 요약</h3>
+      <p style="margin-bottom:16px;">같은 에셋도 지면에 따라 궁합이 완전히 달라집니다.</p>
+      <div class="surface-matrix">
+        <div class="sm-row header">
+          <div class="sm-cell label">에셋·인터랙션</div>
+          <div class="sm-cell">소식칩</div>
+          <div class="sm-cell">숏폼</div>
+          <div class="sm-cell">채팅탭</div>
+        </div>
+        <div class="sm-row"><div class="sm-cell label">카탈로그 캐러셀</div><div class="sm-cell"><span class="sm-mark star">★</span></div><div class="sm-cell"><span class="sm-mark opt">○</span></div><div class="sm-cell"><span class="sm-mark none">·</span></div></div>
+        <div class="sm-row"><div class="sm-cell label">리드폼 하프뷰</div><div class="sm-cell"><span class="sm-mark star">★</span></div><div class="sm-cell"><span class="sm-mark none">·</span></div><div class="sm-cell"><span class="sm-mark none">·</span></div></div>
+        <div class="sm-row"><div class="sm-cell label">지역명 자동 삽입 카피</div><div class="sm-cell"><span class="sm-mark star">★</span></div><div class="sm-cell"><span class="sm-mark none">·</span></div><div class="sm-cell"><span class="sm-mark star">★</span></div></div>
+        <div class="sm-row"><div class="sm-cell label">소셜프루프 배지</div><div class="sm-cell"><span class="sm-mark star">★</span></div><div class="sm-cell"><span class="sm-mark none">·</span></div><div class="sm-cell"><span class="sm-mark none">·</span></div></div>
+        <div class="sm-row"><div class="sm-cell label">프레임 확장 인터랙션</div><div class="sm-cell"><span class="sm-mark star">★</span></div><div class="sm-cell"><span class="sm-mark opt">○</span></div><div class="sm-cell"><span class="sm-mark opt">○</span></div></div>
+        <div class="sm-row"><div class="sm-cell label">크리에이터 콘텐츠 스폰서</div><div class="sm-cell"><span class="sm-mark none">·</span></div><div class="sm-cell"><span class="sm-mark star">★</span></div><div class="sm-cell"><span class="sm-mark none">·</span></div></div>
+        <div class="sm-row"><div class="sm-cell label">하프뷰 상품 카드 (동영상 위)</div><div class="sm-cell"><span class="sm-mark none">·</span></div><div class="sm-cell"><span class="sm-mark star">★</span></div><div class="sm-cell"><span class="sm-mark none">·</span></div></div>
+        <div class="sm-row"><div class="sm-cell label">넛지 카피 (카운트다운·참여자수)</div><div class="sm-cell"><span class="sm-mark opt">○</span></div><div class="sm-cell"><span class="sm-mark star">★</span></div><div class="sm-cell"><span class="sm-mark none">·</span></div></div>
+        <div class="sm-row"><div class="sm-cell label">인터랙티브 이벤트 (탭·스와이프)</div><div class="sm-cell"><span class="sm-mark none">·</span></div><div class="sm-cell"><span class="sm-mark star">★</span></div><div class="sm-cell"><span class="sm-mark none">·</span></div></div>
+        <div class="sm-row"><div class="sm-cell label">사운드 온 CTA</div><div class="sm-cell"><span class="sm-mark none">·</span></div><div class="sm-cell"><span class="sm-mark star">★</span></div><div class="sm-cell"><span class="sm-mark none">·</span></div></div>
+        <div class="sm-row"><div class="sm-cell label">접힘 컨텍스트 카드</div><div class="sm-cell"><span class="sm-mark opt">○</span></div><div class="sm-cell"><span class="sm-mark none">·</span></div><div class="sm-cell"><span class="sm-mark star">★</span></div></div>
+        <div class="sm-row"><div class="sm-cell label">대화 완료 후 배너</div><div class="sm-cell"><span class="sm-mark none">·</span></div><div class="sm-cell"><span class="sm-mark none">·</span></div><div class="sm-cell"><span class="sm-mark star">★</span></div></div>
+        <div class="sm-row"><div class="sm-cell label">브랜드 스폰서 스티커</div><div class="sm-cell"><span class="sm-mark opt">○</span></div><div class="sm-cell"><span class="sm-mark none">·</span></div><div class="sm-cell"><span class="sm-mark star">★</span></div></div>
+        <div class="sm-row"><div class="sm-cell label">방장 셀프서브 광고</div><div class="sm-cell"><span class="sm-mark none">·</span></div><div class="sm-cell"><span class="sm-mark none">·</span></div><div class="sm-cell"><span class="sm-mark star">★</span></div></div>
+      </div>
+      <div class="matrix-legend" style="margin-top:12px;">
+        <div class="leg"><span class="leg-star">★</span>&nbsp;최우선 매칭</div>
+        <div class="leg"><span style="color:var(--ink-2);font-weight:700;">○</span>&nbsp;부가 도입 가능</div>
+        <div class="leg"><span style="color:var(--rule);font-weight:700;">·</span>&nbsp;부적합</div>
+      </div>
+
+      <h3 style="margin-top:56px;">지면 간 시너지 · 통합 광고 여정</h3>
+      <p>3개 지면이 독립적으로 존재하기보다 하나의 사용자 여정으로 연결되면 CVR이 배가됩니다. 이는 토스·당근·배민·오늘의집 어느 플랫폼도 갖지 못한 <strong>카톡 고유의 강점</strong>.</p>
+      <ol style="max-width:720px; margin-top:16px; padding-left:20px; line-height:1.9;">
+        <li><strong>소식칩</strong>에서 카탈로그 캐러셀로 인지 → 상품 페이지 방문</li>
+        <li><strong>숏폼</strong> 크리에이터 콘텐츠 스폰서로 신뢰 형성 → 리타겟팅</li>
+        <li><strong>채팅탭</strong> 대화 완료 후 배너로 재유입 → 결제 완료</li>
+      </ol>
+      <p style="margin-top:12px;">이 3단계 퍼널을 하나의 광고주 캠페인으로 판매하면 카톡만의 "메신저 안 통합 광고 여정" 상품이 됩니다.</p>
+    </section>
+
+    <!-- §5 PLATFORMS -->
     <section id="platforms">
-      <div class="eyebrow">§4 Platform Reports</div>
+      <div class="eyebrow">§5 Platform Reports</div>
       <h2 class="display">플랫폼별 상세 리포트</h2>
       <p class="lead">4개 플랫폼 개별 리포트. 각 리포트는 광고 상품 프로파일, 성공 사례 심층 분석, UI 스크린샷, 카톡 아젠다 매핑을 포함.</p>
 
@@ -1415,7 +1899,7 @@ footer .colophon {
 
     <!-- §5 ROADMAP -->
     <section id="roadmap">
-      <div class="eyebrow">§5 Roadmap</div>
+      <div class="eyebrow">§6 Roadmap</div>
       <h2 class="display">개발 로드맵 · 제안</h2>
       <p class="lead">아이디어 8개를 개발 부담·임팩트·벤치마크 신뢰도 3축으로 평가해 3단계 페이즈로 배치. 3분기 즉시 도입 후보 4개는 벤치마크 신뢰도 최상, 임팩트 상~최상, 개발 부담 낮음~중간의 조합.</p>
 
@@ -1462,7 +1946,7 @@ footer .colophon {
 
     <!-- §6 QUESTIONS -->
     <section id="questions">
-      <div class="eyebrow">§6 Open Questions</div>
+      <div class="eyebrow">§7 Open Questions</div>
       <h2 class="display">팀 논의를 위한 열린 질문</h2>
       <p class="lead">리서치가 답하지 못하고 팀·조직 논의로 결정해야 하는 지점들. 아이디어 도입 결정 전 반드시 답해야 할 질문.</p>
 
@@ -1552,6 +2036,22 @@ footer .colophon {
       idea.classList.toggle('dimmed', !(devMatch && impMatch));
     });
   }
+})();
+
+// Surface tabs (DA improvements)
+(function() {
+  const tabs = document.querySelectorAll('.surface-tab');
+  const panels = document.querySelectorAll('.surface-panel');
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      const target = tab.dataset.surface;
+      tabs.forEach(t => t.classList.remove('active'));
+      panels.forEach(p => p.classList.remove('active'));
+      tab.classList.add('active');
+      const panel = document.querySelector(`.surface-panel[data-panel="${target}"]`);
+      if (panel) panel.classList.add('active');
+    });
+  });
 })();
 
 // Active nav highlighting via IntersectionObserver
