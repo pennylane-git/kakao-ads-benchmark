@@ -840,6 +840,239 @@ p + p { margin-top: 12px; }
 .sm-mark.opt { color: var(--ink-2); }
 .sm-mark.none { color: var(--rule); }
 
+/* Baemin sourcebook block */
+.baemin-block {
+  margin-top: 56px;
+  padding: 32px 0 8px;
+  border-top: 3px double var(--ink);
+}
+.baemin-badge {
+  display: inline-block;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  padding: 3px 10px;
+  background: var(--baemin);
+  color: var(--paper);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-bottom: 14px;
+}
+.bm-heading {
+  font-family: 'Fraunces', serif;
+  font-weight: 600;
+  font-size: 26px;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  margin-bottom: 10px;
+}
+.bm-heading .em-tag {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  color: var(--highlight);
+  font-weight: 500;
+  vertical-align: 4px;
+  margin-left: 8px;
+}
+.bm-lead {
+  font-family: 'Fraunces', serif;
+  font-style: italic;
+  font-weight: 300;
+  font-size: 17px;
+  line-height: 1.55;
+  color: var(--ink-2);
+  max-width: 720px;
+  margin-bottom: 24px;
+}
+.pricing-table {
+  margin: 20px 0 8px;
+  border-top: 2px solid var(--ink);
+}
+.pricing-row {
+  display: grid;
+  grid-template-columns: 2fr 1.2fr 1.2fr 0.9fr;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--rule);
+  gap: 16px;
+  align-items: baseline;
+}
+.pricing-row.header {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10.5px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-mute);
+  font-weight: 600;
+  padding: 10px 0 8px;
+  border-bottom: 1px solid var(--ink);
+}
+.pricing-row .p-name {
+  font-family: 'Fraunces', serif;
+  font-weight: 500;
+  font-size: 15px;
+  letter-spacing: -0.01em;
+}
+.pricing-row .p-name .p-tag {
+  display: inline-block;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px;
+  font-weight: 600;
+  padding: 1px 5px;
+  background: var(--paper-2);
+  color: var(--ink-mute);
+  letter-spacing: 0.08em;
+  vertical-align: 2px;
+  margin-left: 6px;
+}
+.pricing-row .p-name .p-tag.new { background: var(--highlight); color: var(--paper); }
+.pricing-row .p-price {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12.5px;
+  color: var(--ink);
+}
+.pricing-row .p-price .strike {
+  color: var(--ink-mute);
+  text-decoration: line-through;
+  font-size: 11.5px;
+  display: block;
+  margin-bottom: 2px;
+}
+.pricing-row .p-price strong {
+  color: var(--baemin);
+  font-weight: 700;
+}
+.pricing-row .p-ctr {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  color: var(--highlight);
+  font-weight: 600;
+}
+.pricing-row .p-ctr.plain { color: var(--ink-mute); font-weight: 500; }
+
+.bm-highlights {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin: 32px 0 8px;
+}
+.bm-highlight {
+  padding: 20px 22px;
+  background: var(--paper-2);
+  border-left: 3px solid var(--baemin);
+}
+.bm-highlight .bh-metric {
+  font-family: 'Fraunces', serif;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  color: var(--highlight);
+  margin-bottom: 4px;
+}
+.bm-highlight .bh-metric small {
+  font-size: 18px;
+  color: var(--ink);
+  font-weight: 500;
+}
+.bm-highlight .bh-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-mute);
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+.bm-highlight .bh-desc {
+  font-size: 13px;
+  line-height: 1.55;
+  color: var(--ink-2);
+}
+
+.bm-cases {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+  margin: 24px 0 8px;
+}
+.bm-case {
+  padding: 16px 18px;
+  border: 1px solid var(--rule);
+  background: var(--paper);
+}
+.bm-case .bc-brand {
+  font-family: 'Fraunces', serif;
+  font-weight: 600;
+  font-size: 16px;
+  letter-spacing: -0.01em;
+  margin-bottom: 4px;
+}
+.bm-case .bc-brand .bc-industry {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  color: var(--ink-mute);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 500;
+  margin-left: 6px;
+  vertical-align: 2px;
+}
+.bm-case .bc-result {
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--ink-2);
+}
+.bm-case .bc-result strong {
+  color: var(--highlight);
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 700;
+  font-size: 12.5px;
+}
+
+.bm-insights {
+  margin-top: 24px;
+  padding: 20px 22px;
+  background: #FDF5EB;
+  border-left: 3px solid var(--highlight);
+}
+.bm-insights .bi-title {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--highlight);
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.bm-insights ol {
+  padding-left: 20px;
+  font-size: 13.5px;
+  line-height: 1.7;
+  color: var(--ink-2);
+}
+.bm-insights ol li { margin: 4px 0; }
+.bm-insights ol li strong { color: var(--ink); }
+
+.bm-source {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10.5px;
+  color: var(--ink-mute);
+  letter-spacing: 0.02em;
+  margin-top: 20px;
+  padding-top: 12px;
+  border-top: 1px solid var(--rule-soft);
+}
+.bm-source a { color: var(--ink); border-bottom: 1px dotted var(--ink-mute); text-decoration: none; }
+.bm-source a:hover { color: var(--highlight); border-color: var(--highlight); }
+
+@media (max-width: 900px) {
+  .pricing-row { grid-template-columns: 1fr; gap: 4px; }
+  .pricing-row.header { display: none; }
+  .bm-highlights { grid-template-columns: 1fr; }
+  .bm-cases { grid-template-columns: 1fr; }
+}
+
 /* Roadmap */
 .roadmap { margin-top: 36px; border-top: 1px solid var(--ink); }
 .road-phase {
@@ -1817,6 +2050,160 @@ footer .colophon {
         <li><strong>채팅탭</strong> 대화 완료 후 배너로 재유입 → 결제 완료</li>
       </ol>
       <p style="margin-top:12px;">이 3단계 퍼널을 하나의 광고주 캠페인으로 판매하면 카톡만의 "메신저 안 통합 광고 여정" 상품이 됩니다.</p>
+
+      <!-- Baemin 광고소개서 요약 블록 -->
+      <div class="baemin-block">
+        <div class="baemin-badge">Baemin · 2026.07 광고소개서 & 제작 가이드</div>
+        <h3 class="bm-heading">배민이 방금 공개한 신규 광고 상품의 단가·성과<span class="em-tag">Newest Benchmark</span></h3>
+        <p class="bm-lead">2026-07 광고소개서(우아한형제들 광고상품기획팀)와 배민 공식 광고 제작 가이드(bm-with-design.woowahan.com) 11개를 통합. <strong>공시 단가 vs 협상 단가</strong>가 함께 표기되고, CTR 벤치마크와 광고주 성과 사례가 명시된 공식 자료. 카톡 광고 상품 판매 정책·목표 CTR 설정의 실질적 참고선.</p>
+
+        <div class="bm-highlights">
+          <div class="bm-highlight">
+            <div class="bh-label">리뷰완료 배너</div>
+            <div class="bh-metric">CTR 20<small>%</small></div>
+            <div class="bh-desc">배민 자체 예상 CTR. 리뷰 작성 완료 직후 노출되는 지면이라 방어감 최소. <strong>아젠다 4(선물하기·톡딜 종료 광고)</strong> 도입 시 목표 CTR 벤치마크.</div>
+          </div>
+          <div class="bm-highlight">
+            <div class="bh-label">중문배너 (바텀시트→플로팅)</div>
+            <div class="bh-metric">CTR 7~9<small>%</small></div>
+            <div class="bh-desc">1일 50만 노출. 사용자가 광고를 완전히 닫지 않고 최소화만 하는 인터랙션. 카톡 톡딜 프로모션 배너에 즉시 이식 가능.</div>
+          </div>
+          <div class="bm-highlight">
+            <div class="bh-label">검색 서제스트</div>
+            <div class="bh-metric">CTR 3.87<small>%</small></div>
+            <div class="bh-desc">1개월 독점 패키지. 19개 카테고리 운영. 카톡 검색 광고 신설의 단가·성과 벤치마크.</div>
+          </div>
+        </div>
+
+        <h4 style="font-family:'Fraunces',serif; font-weight:600; font-size:18px; margin:32px 0 4px;">공식 단가표 · 상품별 CPT/CPM/CPC (원 → 협상가)</h4>
+        <p style="font-size:13px; color:var(--ink-mute); margin-bottom:12px;">공시 단가는 취소선, 협상 단가는 강조. 배민이 대행사에 실제로 배포하는 자료라 신뢰도 최상.</p>
+        <div class="pricing-table">
+          <div class="pricing-row header">
+            <div>상품</div>
+            <div>단가 유형</div>
+            <div>협상 단가</div>
+            <div>예상 CTR</div>
+          </div>
+          <div class="pricing-row">
+            <div class="p-name">대문배너 <span class="p-tag new">개편</span></div>
+            <div class="p-price">CPT / 1구좌</div>
+            <div class="p-price"><span class="strike">₩6,000,000</span><strong>₩4,000,000</strong> (월~목)</div>
+            <div class="p-ctr plain">1일 노출 160만+</div>
+          </div>
+          <div class="pricing-row">
+            <div class="p-name">중문배너 <span class="p-tag new">개편</span></div>
+            <div class="p-price">CPT / 1구좌</div>
+            <div class="p-price"><span class="strike">₩15,000,000</span><strong>₩10,000,000</strong></div>
+            <div class="p-ctr">7~9%</div>
+          </div>
+          <div class="pricing-row">
+            <div class="p-name">사이배너</div>
+            <div class="p-price">CPM (+타겟팅 10% 할증)</div>
+            <div class="p-price"><span class="strike">₩2,500</span><strong>₩1,500</strong></div>
+            <div class="p-ctr">0.3%</div>
+          </div>
+          <div class="pricing-row">
+            <div class="p-name">혜택배너</div>
+            <div class="p-price">CPC</div>
+            <div class="p-price"><span class="strike">₩600</span><strong>₩400</strong></div>
+            <div class="p-ctr">2%</div>
+          </div>
+          <div class="pricing-row">
+            <div class="p-name">배달현황 배너</div>
+            <div class="p-price">CPC</div>
+            <div class="p-price"><span class="strike">₩750</span><strong>₩500</strong></div>
+            <div class="p-ctr">1%</div>
+          </div>
+          <div class="pricing-row">
+            <div class="p-name">배달현황 동영상 <span class="p-tag new">개편</span></div>
+            <div class="p-price">CPC</div>
+            <div class="p-price"><span class="strike">₩1,050</span><strong>₩700</strong></div>
+            <div class="p-ctr">0.8% / VTR 70%</div>
+          </div>
+          <div class="pricing-row">
+            <div class="p-name">리뷰완료 배너 <span class="p-tag new">2026-07 오픈</span></div>
+            <div class="p-price">CPT / 1일 1구좌 독점</div>
+            <div class="p-price"><span class="strike">₩7,500,000</span><strong>₩5,000,000</strong></div>
+            <div class="p-ctr">20%</div>
+          </div>
+          <div class="pricing-row">
+            <div class="p-name">배달현황 핀 광고 <span class="p-tag new">2026-08 오픈</span></div>
+            <div class="p-price">CPT / 1일 3구좌</div>
+            <div class="p-price"><span class="strike">₩6,000,000</span><strong>₩4,000,000</strong> (월~목)</div>
+            <div class="p-ctr plain">1일 노출 100만+</div>
+          </div>
+          <div class="pricing-row">
+            <div class="p-name">메세지카드 광고 <span class="p-tag new">2026-08 오픈</span></div>
+            <div class="p-price">CPT / 1일 1구좌</div>
+            <div class="p-price"><span class="strike">₩22,500,000</span><strong>₩15,000,000</strong></div>
+            <div class="p-ctr plain">1일 노출 250만</div>
+          </div>
+          <div class="pricing-row">
+            <div class="p-name">스토리 동영상 <span class="p-tag new">2026-07 오픈</span></div>
+            <div class="p-price">CPM</div>
+            <div class="p-price"><span class="strike">₩9,000</span><strong>₩6,000</strong></div>
+            <div class="p-ctr">0.5%</div>
+          </div>
+          <div class="pricing-row">
+            <div class="p-name">검색 서제스트</div>
+            <div class="p-price">CPT · 1개월 독점 패키지</div>
+            <div class="p-price">카테고리별 상이</div>
+            <div class="p-ctr">3.87%</div>
+          </div>
+          <div class="pricing-row">
+            <div class="p-name">음식배달홈 배너 (Top3) <span class="p-tag new">개편</span></div>
+            <div class="p-price">CPT / 1주 4구좌</div>
+            <div class="p-price"><span class="strike">₩34,500,000</span><strong>₩23,000,000</strong></div>
+            <div class="p-ctr">2.5~3%</div>
+          </div>
+        </div>
+
+        <h4 style="font-family:'Fraunces',serif; font-weight:600; font-size:18px; margin:32px 0 4px;">공식 성공 사례 5개 · KPI 명확</h4>
+        <p style="font-size:13px; color:var(--ink-mute); margin-bottom:12px;">배민이 광고소개서에서 직접 공표한 사례. 벤치마크 대비 편차가 크게 명시됨.</p>
+        <div class="bm-cases">
+          <div class="bm-case">
+            <div class="bc-brand">60계치킨<span class="bc-industry">식음료 · 프랜차이즈</span></div>
+            <div class="bc-result">대문배너 노출수 <strong>900만+</strong> · 중문배너 CTR <strong>5%+</strong> (벤치마크 대비 40% 높음) · 사이배너 CTR <strong>0.9~1%</strong> (벤치마크 대비 2배)</div>
+          </div>
+          <div class="bm-case">
+            <div class="bc-brand">스텔라떡볶이<span class="bc-industry">식음료</span></div>
+            <div class="bc-result">중문배너 CTR <strong>5.53%</strong> · 사이배너 CTR <strong>1.06%</strong> · <strong>브랜드찜 4,800%</strong> 대폭 증가</div>
+          </div>
+          <div class="bm-case">
+            <div class="bc-brand">삼성화재<span class="bc-industry">금융</span></div>
+            <div class="bc-result">중문배너 CTR <strong>4~5%</strong> (벤치마크 대비 12% 높음) · 혜택배너 CTR <strong>3~4%</strong> (벤치마크 대비 75% 높음)</div>
+          </div>
+          <div class="bm-case">
+            <div class="bc-brand">엔라이즈 위피<span class="bc-industry">앱 · 소셜/데이팅</span></div>
+            <div class="bc-result">혜택배너 CTR <strong>13%</strong> (벤치마크 대비 <strong>5배</strong>) · CVR <strong>21.5%</strong> 개선 · CPA <strong>5~10% 절감</strong></div>
+          </div>
+          <div class="bm-case">
+            <div class="bc-brand">유니버설픽쳐스 &lt;드래곤 길들이기&gt;<span class="bc-industry">영화</span></div>
+            <div class="bc-result">이벤트페이지 유입 <strong>78,000+</strong> · 선물 완료 카드 판매 <strong>2,700+</strong> (벤치마크 대비 27% 높음)</div>
+          </div>
+          <div class="bm-case">
+            <div class="bc-brand" style="color:var(--ink-mute);">타겟팅 시스템<span class="bc-industry">참고 사양</span></div>
+            <div class="bc-result">1세 단위 연령 · <strong>동 단위</strong> 지역 · 결제 <strong>카드명·메뉴명·브랜드명</strong> 리타겟팅 (1주/2주/1개월) · 가구 추정(1~4인+) — 카톡 카카오페이 데이터로 유사 정밀도 확보 가능</div>
+          </div>
+        </div>
+
+        <div class="bm-insights">
+          <div class="bi-title">▸ 카톡 개발 시사점 5가지</div>
+          <ol>
+            <li><strong>리뷰완료 배너 CTR 20% 예상</strong> — 아젠다 4(선물하기·톡딜 종료 광고) 도입 시 목표 CTR로 활용. 배민이 이미 상업적 가치 검증.</li>
+            <li><strong>바텀시트→플로팅 최소화 인터랙션</strong> — 사용자가 광고를 닫지 않고 축소만 하는 UX. 카톡 프로모션 배너에 이식.</li>
+            <li><strong>공시 단가 vs 협상 단가 표기 방식</strong> — 대행사 판매 표준. 카톡 카카오모먼트 판매 페이지 개편 시 참고.</li>
+            <li><strong>타겟팅 할증 10% (최대 50% 누적)</strong> — 광고주 옵션 판매 표준 스킴. 결제 카드명·메뉴명까지 세분화된 결제 데이터 리타겟팅.</li>
+            <li><strong>LTE 5초 자동재생 후 정지</strong> — 배달현황 동영상 정책. 카톡 숏폼 광고에 이식 시 사용자 저항 크게 감소.</li>
+          </ol>
+        </div>
+
+        <div class="bm-source">
+          Source: <a href="https://github.com/pennylane-glitch/kakao-ads-benchmark/blob/main/platforms/baemin/README.md#부록-a--배민-광고-제작-가이드-상세-스펙-2026-07-업데이트--카톡-da-개선안-직결" target="_blank" rel="noopener">배민 리포트 부록 A · 제작 가이드 11개</a>
+          &nbsp;·&nbsp;
+          <a href="https://github.com/pennylane-glitch/kakao-ads-benchmark/blob/main/platforms/baemin/README.md#부록-b--배민-공식-광고-소개서-202607--단가노출량예상-지표-" target="_blank" rel="noopener">부록 B · 광고 소개서 PDF 통합 데이터</a>
+        </div>
+      </div>
     </section>
 
     <!-- §5 PLATFORMS -->
