@@ -1,0 +1,436 @@
+<!DOCTYPE html><html lang="ko"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>카카오톡 기존 DA 지면 3개 개선안 심층 분석 · 타사 광고 상품 벤치마크</title>
+<style>@font-face{font-family:'Pretendard';src:url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Thin.woff2') format('woff2');font-weight:100;font-display:swap;}
+@font-face{font-family:'Pretendard';src:url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-ExtraLight.woff2') format('woff2');font-weight:200;font-display:swap;}
+@font-face{font-family:'Pretendard';src:url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Light.woff2') format('woff2');font-weight:300;font-display:swap;}
+@font-face{font-family:'Pretendard';src:url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Regular.woff2') format('woff2');font-weight:400;font-display:swap;}
+@font-face{font-family:'Pretendard';src:url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Medium.woff2') format('woff2');font-weight:500;font-display:swap;}
+@font-face{font-family:'Pretendard';src:url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-SemiBold.woff2') format('woff2');font-weight:600;font-display:swap;}
+@font-face{font-family:'Pretendard';src:url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Bold.woff2') format('woff2');font-weight:700;font-display:swap;}
+@font-face{font-family:'Pretendard';src:url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-ExtraBold.woff2') format('woff2');font-weight:800;font-display:swap;}
+@font-face{font-family:'Pretendard';src:url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Black.woff2') format('woff2');font-weight:900;font-display:swap;}
+:root{--paper:#F3EFE4;--paper-2:#EAE3D0;--ink:#0F0E0C;--ink-2:#3F3A32;--ink-mute:#7A736A;--rule:#C9BFA6;--rule-soft:#DBD1B9;--highlight:#B8492B;}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--paper);color:var(--ink);font-family:'Pretendard',-apple-system,sans-serif;font-size:15px;line-height:1.75;letter-spacing:-0.01em;-webkit-font-smoothing:antialiased}
+.wrap{max-width:860px;margin:0 auto;padding:48px 24px 120px}
+.back{display:inline-block;margin-bottom:32px;padding:7px 14px;border:1px solid var(--rule);border-radius:999px;font-size:12px;font-weight:600;text-decoration:none;color:var(--ink-2);background:var(--paper-2)}
+.back:hover{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+h1{font-size:34px;font-weight:800;line-height:1.25;margin:8px 0 20px;letter-spacing:-0.03em}
+h2{font-size:24px;font-weight:700;margin:52px 0 14px;padding-top:22px;border-top:1px solid var(--rule);letter-spacing:-0.02em}
+h3{font-size:19px;font-weight:700;margin:34px 0 10px;letter-spacing:-0.02em}
+h4{font-size:16px;font-weight:600;margin:24px 0 8px}
+p{margin:12px 0}
+ul,ol{margin:12px 0 12px 22px}li{margin:5px 0}
+a{color:var(--highlight);text-decoration:none;border-bottom:1px solid rgba(184,73,43,.3)}
+a:hover{border-bottom-color:var(--highlight)}
+strong{font-weight:700}
+code{font-family:'Pretendard',sans-serif;background:var(--paper-2);padding:1px 5px;border-radius:4px;font-size:13px}
+pre{background:var(--paper-2);border:1px solid var(--rule-soft);border-radius:8px;padding:16px;overflow-x:auto;margin:16px 0}
+pre code{background:none;padding:0}
+blockquote{border-left:3px solid var(--rule);padding:2px 0 2px 16px;margin:16px 0;color:var(--ink-2)}
+table{border-collapse:collapse;width:100%;margin:18px 0;font-size:13.5px;display:block;overflow-x:auto}
+th,td{border:1px solid var(--rule-soft);padding:8px 11px;text-align:left;vertical-align:top}
+th{background:var(--paper-2);font-weight:700;white-space:nowrap}
+img{max-width:100%;height:auto;border:1px solid var(--rule-soft);border-radius:8px;margin:14px 0;display:block}
+hr{border:0;border-top:1px solid var(--rule);margin:36px 0}
+.mermaid{background:var(--paper-2);border:1px solid var(--rule-soft);border-radius:8px;padding:20px;margin:18px 0;text-align:center}
+em{font-style:normal;color:var(--highlight);font-weight:600}
+</style></head><body><div class="wrap">
+<a class="back" href="../index.html">← 대시보드로 돌아가기</a>
+<h1 id="카카오톡-기존-da-지면-3개-개선안-심층-분석">카카오톡 기존 DA 지면 3개 개선안 심층 분석</h1>
+<p><em>작성일: 2026-07-22 · 대상: 카카오톡 광고상품 디자인 파트 · 분석 렌즈: 기존 지면 CVR 개선을 위한 에셋·인터랙션 추가</em></p>
+<blockquote>
+<p><strong>문제 정의</strong>: 카카오톡은 디스플레이 광고가 주력이지만 현재 DA 비중이 낮음. <strong>기존 3개 DA 지면</strong>(친구탭 소식칩 피드형 / 숏폼 동영상 피드형 / 채팅탭 리스트형)에 어떤 <strong>추가 에셋·인터랙션</strong>을 얹으면 CVR을 끌어올릴 수 있을지, 4개 플랫폼 벤치마크에서 실증된 요소만 추립니다. "신규 지면 개설"이 아닌 "기존 지면의 광고 유닛 개선"에 초점.</p>
+</blockquote>
+<hr />
+<h2 id="지면별-ux-컨텍스트-진단">지면별 UX 컨텍스트 진단</h2>
+<p>에셋·인터랙션 추천은 지면의 UX 컨텍스트에 따라 완전히 달라집니다. 개선안을 얹기 전에 지면의 특성부터 정합니다.</p>
+<table>
+<thead>
+<tr>
+<th>지면</th>
+<th>사용자 모드</th>
+<th>방어감</th>
+<th>스크롤 속도</th>
+<th>사용자 의도</th>
+<th>광고 최적 형태</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>친구탭 소식칩</strong></td>
+<td>정보 탐색·수동 소비</td>
+<td>중간</td>
+<td>중간</td>
+<td>"새로 뭐 있나 훑기"</td>
+<td>카탈로그·리드폼·소셜프루프</td>
+</tr>
+<tr>
+<td><strong>숏폼 동영상</strong></td>
+<td>몰입 소비</td>
+<td>낮음</td>
+<td>빠름</td>
+<td>시간 소비·엔터테인먼트</td>
+<td>콘텐츠 결합·크리에이터 스폰서</td>
+</tr>
+<tr>
+<td><strong>채팅탭 리스트</strong></td>
+<td>목적 지향·기능</td>
+<td>매우 높음</td>
+<td>매우 빠름</td>
+<td>특정 대화 찾기</td>
+<td>미니멀·컨텍스트 카드·접힘</td>
+</tr>
+</tbody>
+</table>
+<p>이 3개 지면은 <strong>완전히 다른 사용자 모드</strong>를 가지므로, 같은 광고 소재를 3곳에 뿌리면 효과 없음. 각 지면에 맞는 에셋 유형을 매칭해야 합니다.</p>
+<hr />
+<h2 id="지면-1-친구탭-소식칩-피드형">지면 1 · 친구탭 소식칩 피드형</h2>
+<h3 id="현재-상태관측">현재 상태(관측)</h3>
+<ul>
+<li>이미지 카드 + 짧은 카피 + CTA</li>
+<li>광고와 소식 콘텐츠가 혼재되어 노출</li>
+<li>클릭 시 광고주 랜딩 or 채널 홈으로 이동</li>
+</ul>
+<h3 id="사용자-모드">사용자 모드</h3>
+<p>정보 탐색·수동 소비. 스크롤은 중간 속도로 훑는 상태. 어느 정도 광고에 열려 있지만, "광고 티가 나는 광고"에는 스크롤이 가속됨.</p>
+<h3 id="추가-가능한-에셋인터랙션-우선순위-순">추가 가능한 에셋·인터랙션 (우선순위 순)</h3>
+<h4 id="①-카탈로그-캐러셀-상품-36개-스와이프">① 카탈로그 캐러셀 (상품 3~6개 스와이프)</h4>
+<ul>
+<li><strong>컨셉</strong>: 단일 이미지 → 3~6개 상품 카드가 옆으로 스와이프되는 캐러셀. 광고주가 상품 피드만 등록하면 시스템이 사용자 조회 이력 기반으로 자동 큐레이션.</li>
+<li><strong>벤치마크</strong>:</li>
+<li>당근 29CM 카탈로그 리타겟팅 <strong>ROAS 4,500%+</strong></li>
+<li>당근 SSG 카탈로그 리타겟팅 <strong>ROAS 5배+ 개선</strong></li>
+<li>당근 11번가 카탈로그 리타겟팅 <strong>MAU 확대·구매 KPI +185%</strong></li>
+<li>당근 무신사 카탈로그 Feed 우수 ROAS</li>
+<li><strong>왜 소식칩에 어울리나</strong>: 소식 피드는 원래 "새로운 것 훑기" 모드. 상품 카탈로그도 "새 상품 훑기" 성격이라 UX 저항이 낮음.</li>
+<li><strong>개발 부담</strong>: 중간 (캐러셀 컴포넌트 + 상품 피드 파이프라인)</li>
+</ul>
+<h4 id="②-리드폼-하프뷰-인터랙션">② 리드폼 하프뷰 인터랙션</h4>
+<ul>
+<li><strong>컨셉</strong>: 카드 CTA "상담 신청"·"자료 받기" 클릭 시 화면 하단에서 하프뷰 폼이 슬라이드업. 카톡 계정정보 자동 채움.</li>
+<li><strong>벤치마크</strong>:</li>
+<li>당근 아모레퍼시픽 리드폼 <strong>상담신청 5배+</strong></li>
+<li>당근 신기한나라 <strong>DB KPI 150%</strong></li>
+<li>당근 한화생명 <strong>전환 목표 2배+ 초과</strong></li>
+<li>당근 넥센타이어렌탈 유효 리드 확보</li>
+<li><strong>왜 소식칩에 어울리나</strong>: 사용자가 앱을 떠나지 않고 액션 완결 → drop-off 없음. 특히 금융·보험·자동차·교육처럼 상담이 필요한 카테고리에 효과적.</li>
+<li><strong>개발 부담</strong>: 중간 (SDK + 웹훅)</li>
+</ul>
+<h4 id="③-지역명-자동-삽입-카피">③ 지역명 자동 삽입 카피</h4>
+<ul>
+<li><strong>컨셉</strong>: 카드 카피에 "○○동 이웃분들께" 등 사용자 지역명이 자동 삽입. 광고주는 템플릿만 등록.</li>
+<li><strong>벤치마크</strong>:</li>
+<li>당근 웅진씽크빅 지역 맞춤 오프라인 방문 유입 상승</li>
+<li>당근 제주삼다수 관심사 타겟 <strong>웹방문 4배+</strong></li>
+<li>당근 현대자동차 지역 타겟팅 <strong>KPI 140%</strong></li>
+<li><strong>왜 소식칩에 어울리나</strong>: 소셜 피드에서 개인화 신호는 관련성을 즉시 상승시킴. 카톡의 계정 위치 데이터는 저활용 자산.</li>
+<li><strong>개발 부담</strong>: 낮음 (템플릿 언어 + 프라이버시 계층)</li>
+</ul>
+<h4 id="④-소셜프루프-배지-후기별점거리">④ 소셜프루프 배지 (후기·별점·거리)</h4>
+<ul>
+<li><strong>컨셉</strong>: 카드 하단에 "이 브랜드 리뷰 300개 · 평균 4.7점 · 근처 이웃 25명이 관심" 등 소셜프루프 자동 표시.</li>
+<li><strong>벤치마크</strong>:</li>
+<li>당근 소상공인 다수 사례 (구두수선 매출 6배, 시공업 하루 문의 3건+, 카페 단골 3천명)</li>
+<li>당근 비즈프로필 후기 별점 시스템</li>
+<li><strong>왜 소식칩에 어울리나</strong>: 광고 카드에 "실제 사용자" 신호가 붙으면 광고감이 크게 감소. 카톡의 톡채널 구독자 수·별점 데이터를 표준 배지로.</li>
+<li><strong>개발 부담</strong>: 낮음 (카톡채널 데이터 파이프)</li>
+</ul>
+<h4 id="⑤-프레임-확장-인터랙션-탭-시-카드가-커짐">⑤ 프레임 확장 인터랙션 (탭 시 카드가 커짐)</h4>
+<ul>
+<li><strong>컨셉</strong>: 카드 탭 시 프레임이 화면 3/4까지 확장되며 브랜드 미니 스토어·이벤트 페이지가 인앱으로 오픈.</li>
+<li><strong>벤치마크</strong>:</li>
+<li>토스 인앱 랜딩(하프뷰) 스펙</li>
+<li>배민 프로모션 스토어 (브랜드 가상 스토어)</li>
+<li>오늘의집 브랜드관 (인앱 브랜드 스토어)</li>
+<li><strong>왜 소식칩에 어울리나</strong>: 사용자가 앱을 떠나지 않고 브랜드와 인터랙션 완결 → 참여율 상승. 특히 시즌 프로모션·이벤트 브랜드에 강력.</li>
+<li><strong>개발 부담</strong>: 높음 (SDK + 브랜드 페이지 템플릿)</li>
+</ul>
+<hr />
+<h2 id="지면-2-숏폼-동영상-피드형">지면 2 · 숏폼 동영상 피드형</h2>
+<h3 id="현재-상태관측_1">현재 상태(관측)</h3>
+<ul>
+<li>지금탭 숏폼 콘텐츠 사이에 광고 영상 삽입</li>
+<li>자동 재생·풀스크린 세로 영상</li>
+</ul>
+<h3 id="사용자-모드_1">사용자 모드</h3>
+<p>몰입 소비. 스크롤이 빠르고, 재미없으면 즉시 스킵. 브랜드 인지 목적 광고보다 <strong>콘텐츠 자체가 매력적</strong>인 광고가 살아남음.</p>
+<h3 id="추가-가능한-에셋인터랙션-우선순위-순_1">추가 가능한 에셋·인터랙션 (우선순위 순)</h3>
+<h4 id="①-크리에이터-콘텐츠-스폰서-콘텐츠-안에-상품-태그">① 크리에이터 콘텐츠 스폰서 (콘텐츠 안에 상품 태그)</h4>
+<ul>
+<li><strong>컨셉</strong>: 지금탭 크리에이터가 만든 실제 콘텐츠에 광고주 상품을 태그. 사용자가 태그 탭 시 상품 상세로 진입. 크리에이터에게 판매 커미션 배분.</li>
+<li><strong>벤치마크</strong>:</li>
+<li>오늘의집 크리에이터 수익쉐어(집사) <strong>임팩트 25/25 만점</strong></li>
+<li>오늘의집 콘텐츠 스폰서(집들이) <strong>임팩트 24/25</strong></li>
+<li>오늘의집이 상시 운영중인 국내 유일 완결형 UGC-커머스 결합 사례</li>
+<li><strong>왜 숏폼에 어울리나</strong>: 광고를 "크리에이터가 소개하는 상품" 형태로 변환 → 광고 저항감 최소. 크리에이터 신뢰 자산 활용.</li>
+<li><strong>개발 부담</strong>: 높음 (크리에이터 도구·pCTR 매칭·커미션 정산)</li>
+</ul>
+<h4 id="②-하프뷰-상품-카드-동영상-위-슬라이드업">② 하프뷰 상품 카드 (동영상 위 슬라이드업)</h4>
+<ul>
+<li><strong>컨셉</strong>: 영상 재생 중 특정 초에 하단에서 상품 카드가 슬라이드업. 카드에는 상품 이미지·가격·CTA. 탭 시 상품 상세로 진입하되 영상은 소리 낮춰 재생 유지.</li>
+<li><strong>벤치마크</strong>:</li>
+<li>오늘의집 오하 라이브 커머스의 상품 카드 UX</li>
+<li>당근 카탈로그 리타겟팅 카드 컴포넌트</li>
+<li><strong>왜 숏폼에 어울리나</strong>: 영상 시청을 방해하지 않으면서 커머스 전환 트리거 제공. 특히 라이브 커머스·상품 데모 영상에 강력.</li>
+<li><strong>개발 부담</strong>: 중간 (플레이어 오버레이 SDK)</li>
+</ul>
+<h4 id="③-넛지-카피-자동-삽입-실시간-참여자수카운트다운">③ 넛지 카피 자동 삽입 (실시간 참여자수·카운트다운)</h4>
+<ul>
+<li><strong>컨셉</strong>: 영상 광고 하단 자막에 "지금 500명이 보고 있어요"·"오늘 자정까지 30% 할인" 자동 삽입.</li>
+<li><strong>벤치마크</strong>:</li>
+<li>배민 프로모션 스토어 카운트다운</li>
+<li>오늘의집 오하 라이브 알림·특가 쿠폰</li>
+<li>배민 B마트 "1시간 이내 배달" 시간 압박</li>
+<li><strong>왜 숏폼에 어울리나</strong>: 몰입 상태에서 즉시 액션 유도 필요. FOMO(놓칠까 봐 무서움) 넛지가 스킵률을 낮춤.</li>
+<li><strong>개발 부담</strong>: 낮음 (텍스트 오버레이 + 실시간 카운터)</li>
+</ul>
+<h4 id="④-인터랙티브-이벤트-탭스와이프로-반응">④ 인터랙티브 이벤트 (탭·스와이프로 반응)</h4>
+<ul>
+<li><strong>컨셉</strong>: 영상 광고에 "탭해서 응원해요"·"스와이프해서 상품 보기" 등 인터랙션 삽입. 참여 시 리워드(초코·이모티콘 조각) 지급.</li>
+<li><strong>벤치마크</strong>:</li>
+<li>토스 두근두근 1등 찍기 카탈로그 투표 <strong>클릭률 5%, 클릭 190만+</strong></li>
+<li>토스 리워드 광고 5종(카탈로그 투표·머니알림·행운퀴즈·미션·버튼누르기)</li>
+<li><strong>왜 숏폼에 어울리나</strong>: 몰입 콘텐츠에 참여 요소를 얹으면 참여율·기억률 상승. 다만 카톡의 "과도한 게이미피케이션 배제" 원칙에 유의 → 빈도 제한 필수.</li>
+<li><strong>개발 부담</strong>: 중간 (참여 UI + 리워드 지급 인프라)</li>
+</ul>
+<h4 id="⑤-자동재생-사운드-온-cta">⑤ 자동재생 → 사운드 온 CTA</h4>
+<ul>
+<li><strong>컨셉</strong>: 음소거 자동재생 상태에서 "탭해서 소리 켜기" 명시적 CTA. 소리 켜는 사용자는 강한 관심 신호 → 광고주에게 CVR 예측치로 제공.</li>
+<li><strong>벤치마크</strong>: 업계 표준(관찰). 오늘의집·당근 동영상 광고에서도 관행적으로 사용.</li>
+<li><strong>왜 숏폼에 어울리나</strong>: 사운드 온은 참여도 최상급 신호. 이 신호를 광고주 대시보드로 노출 시 프리미엄 인벤토리 가치 상승.</li>
+<li><strong>개발 부담</strong>: 낮음 (플레이어 UI + 이벤트 추적)</li>
+</ul>
+<hr />
+<h2 id="지면-3-채팅탭-리스트형">지면 3 · 채팅탭 리스트형</h2>
+<h3 id="현재-상태관측_2">현재 상태(관측)</h3>
+<ul>
+<li>채팅방 리스트 상단이나 중간에 배너·카드 형태 광고 삽입</li>
+<li>사용자는 특정 대화방 찾는 목적 지향 상태</li>
+</ul>
+<h3 id="사용자-모드_2">사용자 모드</h3>
+<p>목적 지향·기능 사용. <strong>방어감이 3개 지면 중 가장 높음</strong>. 스크롤은 대화방 찾기 위해 매우 빠름. 광고 개입 시 즉시 반발 리스크.</p>
+<h3 id="추가-가능한-에셋인터랙션-우선순위-순_2">추가 가능한 에셋·인터랙션 (우선순위 순)</h3>
+<blockquote>
+<p>⚠️ <strong>주의</strong>: 채팅탭은 광고 도입 리스크가 가장 높은 지면. 아래 개선안들은 <strong>최대한 미니멀·컨텍스트 매칭·접힘 상태</strong>를 기본값으로 해야 함. 사용자가 명시적으로 확장할 때만 광고 콘텐츠 전개.</p>
+</blockquote>
+<h4 id="①-접힘-상태-컨텍스트-카드-탭-시-확장">① 접힘 상태 컨텍스트 카드 (탭 시 확장)</h4>
+<ul>
+<li><strong>컨셉</strong>: 리스트에 광고가 "카드"가 아니라 <strong>한 줄 알림 형태</strong>로 삽입. 접힘 상태에서는 아이콘 + "○○동 근처 새 매장" 같은 짧은 카피만. 사용자가 명시적으로 탭할 때만 카드 확장.</li>
+<li><strong>벤치마크</strong>:</li>
+<li>당근 비즈프로필+지역광고 지역 컨텍스트 카드</li>
+<li>배민 우리가게클릭 CPC 셀프서브 (지역 매칭)</li>
+<li><strong>왜 채팅탭에 어울리나</strong>: 리스트 UI의 시각 무게를 흐리지 않음. 명시적 확장이라 광고 클릭이 곧 강한 관심 신호.</li>
+<li><strong>개발 부담</strong>: 중간 (접힘/확장 애니메이션·컨텍스트 매칭 엔진)</li>
+</ul>
+<h4 id="②-대화-완료-후-컨텍스트-배너">② 대화 완료 후 컨텍스트 배너</h4>
+<ul>
+<li><strong>컨셉</strong>: 채팅방 리스트 자체가 아니라 <strong>채팅방을 나온 직후</strong> 리스트 최상단에 컨텍스트 배너 1회 노출. 방금 나눈 대화의 주제와 관련된 광고(카테고리 기반, 대화 내용 자체 접근 X).</li>
+<li><strong>벤치마크</strong>:</li>
+<li>토스 송금 후 배너 (액션 완료 후 노출 원칙)</li>
+<li>배민 결제 완료 후 배너 (지불의사 검증 세그먼트 CPA 최적)</li>
+<li><strong>왜 채팅탭에 어울리나</strong>: 대화 종료 순간은 방어감이 잠깐 내려간 순간. 액션 후 광고의 원칙을 채팅에 적용.</li>
+<li><strong>개발 부담</strong>: 낮음 (대화방 이탈 이벤트 훅)</li>
+<li><strong>주의</strong>: 대화 내용 자체는 절대 광고 컨텍스트로 사용 X. 오픈채팅방 카테고리·시간대만 사용.</li>
+</ul>
+<h4 id="③-채팅방-유형별-브랜드-스폰서-스티커">③ 채팅방 유형별 브랜드 스폰서 스티커</h4>
+<ul>
+<li><strong>컨셉</strong>: 오픈채팅방 유형에 어울리는 브랜드가 방 상단에 <strong>작은 스폰서 스티커</strong>로 상시 노출. 방장이 승인한 브랜드만.</li>
+<li><strong>벤치마크</strong>:</li>
+<li>배민 프로모션 스토어 브랜드 미니 스토어</li>
+<li>오늘의집 브랜드관 상시 운영</li>
+<li>배민문방구 브랜드 IP 콜라보(협업 형태)</li>
+<li><strong>왜 채팅탭에 어울리나</strong>: "이 대화는 ○○브랜드가 응원해요" 형태의 미니멀 스폰서십. 강제 광고가 아니라 방장-브랜드 파트너십.</li>
+<li><strong>개발 부담</strong>: 중간 (방장 대시보드 + 브랜드 매칭)</li>
+</ul>
+<h4 id="④-오픈채팅-방장-셀프서브-광고">④ 오픈채팅 방장 셀프서브 광고</h4>
+<ul>
+<li><strong>컨셉</strong>: 오픈채팅 방장이 자기 방을 홍보하기 위해 다른 채팅 리스트 상단에 자기 방을 CPC로 노출. 소상공인 방장인 경우 매장 홍보로 확장 가능.</li>
+<li><strong>벤치마크</strong>:</li>
+<li>당근 비즈프로필+지역광고 소상공인 43+개 성공 사례</li>
+<li>배민 우리가게클릭 30만+ 소상공인 셀프서브</li>
+<li><strong>왜 채팅탭에 어울리나</strong>: 광고주가 카톡 유저 자신(방장)이라 광고 저항감이 크게 감소. 카톡 광고주 저변을 롱테일로 확장.</li>
+<li><strong>개발 부담</strong>: 매우 높음 (셀프서브 대시보드·방장 인증·정산 인프라)</li>
+</ul>
+<h4 id="⑤-지역명시간대-개인화-카피">⑤ 지역명·시간대 개인화 카피</h4>
+<ul>
+<li><strong>컨셉</strong>: 리스트 상단 배너의 카피에 지역명·시간대·요일 자동 삽입. "오늘 저녁 6시, ○○동 근처에서 열리는 이벤트".</li>
+<li><strong>벤치마크</strong>: 당근 지역명 자동 삽입 사례 다수</li>
+<li><strong>왜 채팅탭에 어울리나</strong>: 리스트 UI에서 광고가 확실히 어울리려면 컨텍스트 관련성이 최상급이어야 함. 위치+시간+요일 시그널이 그 관련성을 만듦.</li>
+<li><strong>개발 부담</strong>: 낮음 (템플릿 언어)</li>
+</ul>
+<hr />
+<h2 id="지면-에셋-매트릭스-한눈-요약">지면 × 에셋 매트릭스 (한눈 요약)</h2>
+<table>
+<thead>
+<tr>
+<th>에셋·인터랙션</th>
+<th style="text-align: center;">소식칩</th>
+<th style="text-align: center;">숏폼</th>
+<th style="text-align: center;">채팅탭</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>카탈로그 캐러셀</td>
+<td style="text-align: center;">★</td>
+<td style="text-align: center;">○</td>
+<td style="text-align: center;">·</td>
+</tr>
+<tr>
+<td>리드폼 하프뷰</td>
+<td style="text-align: center;">★</td>
+<td style="text-align: center;">·</td>
+<td style="text-align: center;">·</td>
+</tr>
+<tr>
+<td>지역명 자동 삽입 카피</td>
+<td style="text-align: center;">★</td>
+<td style="text-align: center;">·</td>
+<td style="text-align: center;">★</td>
+</tr>
+<tr>
+<td>소셜프루프 배지</td>
+<td style="text-align: center;">★</td>
+<td style="text-align: center;">·</td>
+<td style="text-align: center;">·</td>
+</tr>
+<tr>
+<td>프레임 확장 인터랙션</td>
+<td style="text-align: center;">★</td>
+<td style="text-align: center;">○</td>
+<td style="text-align: center;">○</td>
+</tr>
+<tr>
+<td>크리에이터 콘텐츠 스폰서</td>
+<td style="text-align: center;">·</td>
+<td style="text-align: center;">★</td>
+<td style="text-align: center;">·</td>
+</tr>
+<tr>
+<td>하프뷰 상품 카드 (동영상 위)</td>
+<td style="text-align: center;">·</td>
+<td style="text-align: center;">★</td>
+<td style="text-align: center;">·</td>
+</tr>
+<tr>
+<td>넛지 카피 (카운트다운·참여자수)</td>
+<td style="text-align: center;">○</td>
+<td style="text-align: center;">★</td>
+<td style="text-align: center;">·</td>
+</tr>
+<tr>
+<td>인터랙티브 이벤트 (탭·스와이프)</td>
+<td style="text-align: center;">·</td>
+<td style="text-align: center;">★</td>
+<td style="text-align: center;">·</td>
+</tr>
+<tr>
+<td>사운드 온 CTA</td>
+<td style="text-align: center;">·</td>
+<td style="text-align: center;">★</td>
+<td style="text-align: center;">·</td>
+</tr>
+<tr>
+<td>접힘 컨텍스트 카드</td>
+<td style="text-align: center;">○</td>
+<td style="text-align: center;">·</td>
+<td style="text-align: center;">★</td>
+</tr>
+<tr>
+<td>대화 완료 후 배너</td>
+<td style="text-align: center;">·</td>
+<td style="text-align: center;">·</td>
+<td style="text-align: center;">★</td>
+</tr>
+<tr>
+<td>브랜드 스폰서 스티커</td>
+<td style="text-align: center;">○</td>
+<td style="text-align: center;">·</td>
+<td style="text-align: center;">★</td>
+</tr>
+<tr>
+<td>방장 셀프서브 광고</td>
+<td style="text-align: center;">·</td>
+<td style="text-align: center;">·</td>
+<td style="text-align: center;">★</td>
+</tr>
+</tbody>
+</table>
+<p><strong>★ = 최우선 · ○ = 부가 도입 가능 · · = 부적합</strong></p>
+<hr />
+<h2 id="우선순위-요약-top-5-개선안">우선순위 요약 · Top 5 개선안</h2>
+<p>3개 지면 전체에서 개발 부담 대비 임팩트가 큰 순.</p>
+<table>
+<thead>
+<tr>
+<th>순위</th>
+<th>개선안</th>
+<th>지면</th>
+<th>벤치마크</th>
+<th>개발 부담</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>★1</td>
+<td><strong>카탈로그 캐러셀</strong></td>
+<td>소식칩</td>
+<td>29CM ROAS 4,500%+·SSG 5배+·11번가 KPI +185%</td>
+<td>중</td>
+</tr>
+<tr>
+<td>★2</td>
+<td><strong>리드폼 하프뷰</strong></td>
+<td>소식칩</td>
+<td>아모레퍼시픽 5배+·신기한나라 150%·한화생명 2배+</td>
+<td>중</td>
+</tr>
+<tr>
+<td>★3</td>
+<td><strong>대화 완료 후 배너</strong></td>
+<td>채팅탭</td>
+<td>토스 송금 후·배민 결제 완료 후</td>
+<td>낮</td>
+</tr>
+<tr>
+<td>★4</td>
+<td><strong>지역명 자동 삽입 카피</strong></td>
+<td>소식칩·채팅탭</td>
+<td>당근 지역 카피 실증</td>
+<td>낮</td>
+</tr>
+<tr>
+<td>★5</td>
+<td><strong>크리에이터 콘텐츠 스폰서</strong></td>
+<td>숏폼</td>
+<td>오늘의집 25/25 만점</td>
+<td>상</td>
+</tr>
+</tbody>
+</table>
+<p><strong>즉시 도입 후보 3개(개발 부담 낮음~중간)</strong>: 카탈로그 캐러셀·리드폼 하프뷰·지역명 자동 삽입 카피는 3분기 안에 파일럿 가능. 카탈로그 캐러셀은 톡딜 상품 피드를 그대로 활용할 수 있어 광고주 진입장벽이 매우 낮음.</p>
+<hr />
+<h2 id="추가-제안-지면-간-시너지">추가 제안 · 지면 간 시너지</h2>
+<p>3개 지면이 독립적으로 존재하기보다 <strong>하나의 사용자 여정</strong>으로 연결되면 CVR이 배가됨:</p>
+<ol>
+<li><strong>소식칩에서 카탈로그 캐러셀로 인지</strong> → 상품 페이지 방문</li>
+<li><strong>숏폼 광고에서 크리에이터 콘텐츠로 신뢰 형성</strong> → 리타겟팅</li>
+<li><strong>채팅탭 대화 완료 후 배너로 재유입</strong> → 결제 완료</li>
+</ol>
+<p>이 3단계 퍼널을 하나의 광고주 캠페인으로 판매하면 카톡만의 "메신저 안 통합 광고 여정"이 됨. 이는 토스·당근·배민·오늘의집 어느 플랫폼도 갖지 못한 카톡 고유 강점.</p>
+<hr />
+<h2 id="팀-논의를-위한-열린-질문">팀 논의를 위한 열린 질문</h2>
+<ul>
+<li><strong>A. 채팅탭 광고 도입 정책</strong> — 채팅탭은 광고 도입 리스크가 가장 높은 지면. 사내에서 어느 수준까지 광고 삽입이 허용되는지 방침 확인 필요.</li>
+<li><strong>B. 크리에이터 프로그램</strong> — 카톡에는 아직 크리에이터 커머스 인프라가 없음. 지금탭 콘텐츠 크리에이터 대상 파일럿을 어느 조직이 담당할지?</li>
+<li><strong>C. 리타겟팅 픽셀 표준화</strong> — 카카오페이·톡딜·이커머스 광고주 시스템과 픽셀을 연결하는 기술 표준이 있어야 카탈로그 리타겟팅이 가능. 사내 광고 SDK 로드맵 확인 필요.</li>
+<li><strong>D. 위치·시간 데이터 프라이버시</strong> — 지역명·시간대 자동 삽입은 정보동의가 필요. 옵트인 플로우 별도 설계.</li>
+</ul>
+<hr />
+<p><em>이 분석은 <a href="./report.html">종합 리포트</a>와 <a href="../platforms/">4개 플랫폼 리서치</a>의 데이터를 "기존 DA 지면 개선" 렌즈로 재구성한 것입니다. 각 벤치마크의 세부 사례·수치·이미지는 각 플랫폼 리포트에서 확인하세요.</em></p>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+<script>if(window.mermaid){mermaid.initialize({startOnLoad:true,theme:'neutral',fontFamily:'Pretendard'});}</script>
+</body></html>

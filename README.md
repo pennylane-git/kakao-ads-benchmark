@@ -3,7 +3,8 @@
 카카오톡 광고 상품(비즈보드 / 소식칩 / 톡딜)의 진화 방향을 탐색하기 위한
 국내 4개 플랫폼 광고 상품 벤치마크 리서치 저장소.
 
-> **🔗 웹 대시보드**: https://pennylane-glitch.github.io/kakao-ads-benchmark/ — 브라우저에서 바로 열립니다.
+> **🔗 웹 대시보드**: 사내 GHE Pages 배포 시 https://github.daumkakao.com/pages/penny-lane/kakao-ads-benchmark/
+> 로컬에서는 `docs/index.html`을 브라우저로 열면 리포트 전체가 연결됩니다.
 
 
 **기간**: 2026-07-21 ~ 2026-08-04
