@@ -3,6 +3,8 @@
 카카오톡 광고 상품(비즈보드 / 소식칩 / 톡딜)의 진화 방향을 탐색하기 위한
 국내 4개 플랫폼 광고 상품 벤치마크 리서치 저장소.
 
+> **🔗 웹 대시보드**: https://pennylane-glitch.github.io/kakao-ads-benchmark/ — 브라우저에서 바로 열립니다.
+
 > **인터랙티브 웹 대시보드**: [docs/index.html](./docs/index.html) — 브라우저에서 열면 예쁘게 렌더링됩니다. GitHub 웹에서는 raw로 열어 파일을 다운로드 후 브라우저로 여세요.
 
 
