@@ -5,8 +5,6 @@
 
 > **🔗 웹 대시보드**: https://pennylane-glitch.github.io/kakao-ads-benchmark/ — 브라우저에서 바로 열립니다.
 
-> **인터랙티브 웹 대시보드**: [docs/index.html](./docs/index.html) — 브라우저에서 열면 예쁘게 렌더링됩니다. GitHub 웹에서는 raw로 열어 파일을 다운로드 후 브라우저로 여세요.
-
 
 **기간**: 2026-07-21 ~ 2026-08-04
 **대상 플랫폼**: 토스 · 당근 · 배달의민족 · 오늘의집
